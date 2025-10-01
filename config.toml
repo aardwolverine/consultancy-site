@@ -1,0 +1,17 @@
+publishDir = "docs"
+baseURL = 'https://aardwolverine.github.io/consultancy-site'
+# baseURL = 'https://acadsys.com.au'
+languageCode = 'en-us'
+
+title = "Academic Services Consulting"
+theme = "quint"
+
+[params]
+numImages = 10
+css = ["css/custom.css"]
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+

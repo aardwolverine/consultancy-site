@@ -1,0 +1,15 @@
+# invoice template
+
+client: "Example Pty Ltd"
+email: "accounts@example.com"
+date: "2025-09-21"
+due_date: "2025-10-21"
+items:
+  - description: "Consulting services"
+    hours: 10
+    rate: 150
+  - description: "Report preparation"
+    hours: 3
+    rate: 150
+notes: "Thank you for your business."
+

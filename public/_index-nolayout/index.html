@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="/images/fav/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/fav/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="/images/fav/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="/images/fav/site.webmanifest" rel="manifest"/>
+    <title>Academic Systems Consulting | Academic Systems Consultancy</title>
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/custom.css" rel="stylesheet"/>
+    
+</head><body><header>
+    <div class="logo h-card">
+        <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+            <img alt="Site Logo" class="site-logo u-photo" src="/images/logo.png"/>
+        </a>
+    </div>
+    <nav class="menu">
+        <ul>
+        </ul>
+    </nav>
+</header>
+
+    
+
+    <section class="hero"
+    style='background-image: url("/images/10.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+        <div>
+            <h1 class="p-name" id="textOverlay">Academic Systems Consulting</h1>
+        </div>
+    </section>
+    <main class="post h-entry container row">
+        <div class="post">
+            <div class="post-data row">
+                <time class="dt-published" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+                    <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/_index-nolayout/">Jan 1, 1</a>
+                </time>
+                <span rel="author" class="p-author h-card">
+                    <img class="u-photo hidden" src="" />
+                    <span class="p-name hidden" rel="me"></span>
+                </span>
+            </div>
+            <div class="e-content">
+                <h2 id="about">About</h2>
+<p>Academic Systems Consulting partners with universities and tertiary institutions to enhance academic quality and operational effectiveness.<br>
+Led by a PhD-qualified higher education specialist, we bring deep expertise in learning analytics, academic governance, and IT-enabled business analysis.<br>
+Our approach is grounded in research and a commitment to the student experience.</p>
+<h2 id="what-we-do">What We Do</h2>
+<ul>
+<li>
+<p><strong>Learning Analytics &amp; Surveys</strong><br>
+Design and interpret institution-wide surveys, learning analytics, and engagement data to inform strategy and improve outcomes.</p>
+</li>
+<li>
+<p><strong>Policy &amp; Risk Analysis</strong><br>
+Review and strengthen policy frameworks, identify risk, and recommend pragmatic controls that align with regulatory compliance.</p>
+</li>
+<li>
+<p><strong>Business Process Improvement</strong><br>
+Map and analyse academic and administrative processes to reduce staff workload, streamline systems, and deliver measurable efficiency gains.</p>
+</li>
+<li>
+<p><strong>Automation &amp; IT Project Support</strong><br>
+Plan and oversee automation initiatives, provide corrective input to IT projects, and ensure technology delivers on academic and operational needs.</p>
+</li>
+<li>
+<p><strong>Student Experience Consultation</strong><br>
+Facilitate student feedback processes and translate insights into actionable recommendations that enhance satisfaction and success.</p>
+</li>
+</ul>
+<h2 id="why-choose-us">Why Choose Us</h2>
+<ul>
+<li><strong>Student-Centred</strong>: Every engagement keeps student learning and wellbeing at the core.</li>
+<li><strong>Evidence-Driven</strong>: Data analysis and academic research underpin all recommendations.</li>
+<li><strong>Collaborative</strong>: We work with academic and professional staff to co-create sustainable solutions.</li>
+<li><strong>Compliance Ready</strong>: Expertise in TEQSA, ESOS, and ASQA ensuring regulatory obligations are upheld.</li>
+</ul>
+<h2 id="outcomes-you-can-expect">Outcomes You Can Expect</h2>
+<ul>
+<li>Reduced administrative burden and clearer staff workload allocation.</li>
+<li>Project rescue to identify next steps in stalled projects.</li>
+<li>Realistic policies and processes that support strategic and academic goals.</li>
+<li>Systems and dashboards aligned to the academic user experience.</li>
+<li>Data-informed decisions that elevate the student experience.</li>
+</ul>
+<h2 id="contact">Contact</h2>
+<p>Ready to strengthen academic quality and streamline operations?</p>
+<p>Email <strong><a href="mailto:info@assureeducation.com.au">info@assureeducation.com.au</a></strong><br>
+Phone <strong>+61 4XX XXX XXX</strong></p>
+
+                
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function adjustTextColor(sectionId) {
+            const section = document.getElementById(sectionId);
+            const style = window.getComputedStyle(section);
+            const imageUrl = style
+                .backgroundImage
+                .slice(4, -1)
+                .replace(/["']/g, "");
+            const image = new Image();
+            image.src = imageUrl;
+            image.onload = function () {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = image.width;
+                canvas.height = image.height;
+                context.drawImage(image, 0, 0, image.width, image.height);
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                let r = 0,
+                    g = 0,
+                    b = 0;
+                for (let i = 0; i < data.length; i += 4) {
+                    r += data[i];
+                    g += data[i + 1];
+                    b += data[i + 2];
+                }
+                r /= (data.length / 4);
+                g /= (data.length / 4);
+                b /= (data.length / 4);
+                const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+                const textColor = brightness > 128
+                    ? 'black'
+                    : 'white';
+                const shadowColor = brightness > 128
+                    ? 'rgba(255, 255, 255, 0.7)'
+                    : 'rgba(0, 0, 0, 0.7)';
+                const textOverlay = document.getElementById('textOverlay');
+                textOverlay.style.color = textColor;
+                textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+            };
+        }
+        
+        adjustTextColor('heroSection');
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry
+                        .target
+                        .getAttribute('id');
+
+                    if (entry.intersectionRatio > 0) {
+                        clearActiveStatesInTableOfContents();
+                        document
+                            .querySelector(`nav li a[href="#${id}"]`)
+                            .parentElement
+                            .classList
+                            .add('active');
+                    }
+                });
+            });
+            document
+                .querySelectorAll('h1[id],h2[id],h3[id],h4[id]')
+                .forEach((section) => {
+                    observerForTableOfContentActiveState.observe(section);
+                });
+
+        });
+
+        function clearActiveStatesInTableOfContents() {
+            document
+                .querySelectorAll('nav li')
+                .forEach((section) => {
+                    section
+                        .classList
+                        .remove('active');
+                });
+        }
+    </script>
+<footer>
+    <div class="social-media">
+        
+    </div>
+    <div class="logo h-card">
+        <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+            <img alt="Site Logo" class="site-logo u-photo" src="/images/logo.png"/>
+        </a>
+        <p>© 2025
+            Academic Systems Consultancy</p>
+    </div>
+    <nav>
+        <ul>
+        </ul>
+    </nav>
+    <script>
+    
+    window.siteParams = {
+        numImages:  10 
+    };
+    
+    window.store = {
+    
+    
+    "http:\/\/bee.pangolin-fence.ts.net:1313\/_index-nolayout\/": {
+        
+        "title": "Academic Systems Consulting",
+            "tags": [],
+    "content": "About Academic Systems Consulting partners with universities and tertiary institutions to enhance academic quality and operational effectiveness.\nLed by a PhD-qualified higher education specialist, we bring deep expertise in learning analytics, academic governance, and IT-enabled business analysis.\nOur approach is grounded in research and a commitment to the student experience.\nWhat We Do Learning Analytics \u0026amp; Surveys\nDesign and interpret institution-wide surveys, learning analytics, and engagement data to inform strategy and improve outcomes.\nPolicy \u0026amp; Risk Analysis\nReview and strengthen policy frameworks, identify risk, and recommend pragmatic controls that align with regulatory compliance.\nBusiness Process Improvement\nMap and analyse academic and administrative processes to reduce staff workload, streamline systems, and deliver measurable efficiency gains.\nAutomation \u0026amp; IT Project Support\nPlan and oversee automation initiatives, provide corrective input to IT projects, and ensure technology delivers on academic and operational needs.\nStudent Experience Consultation\nFacilitate student feedback processes and translate insights into actionable recommendations that enhance satisfaction and success.\nWhy Choose Us Student-Centred: Every engagement keeps student learning and wellbeing at the core. Evidence-Driven: Data analysis and academic research underpin all recommendations. Collaborative: We work with academic and professional staff to co-create sustainable solutions. Compliance Ready: Expertise in TEQSA, ESOS, and ASQA ensuring regulatory obligations are upheld. Outcomes You Can Expect Reduced administrative burden and clearer staff workload allocation. Project rescue to identify next steps in stalled projects. Realistic policies and processes that support strategic and academic goals. Systems and dashboards aligned to the academic user experience. Data-informed decisions that elevate the student experience. Contact Ready to strengthen academic quality and streamline operations?\nEmail info@assureeducation.com.au\nPhone +61 4XX XXX XXX\n", 
+    "url": "http:\/\/bee.pangolin-fence.ts.net:1313\/_index-nolayout\/",
+    "image": "",
+    "description": "Student-centric design for higher education quality and efficiency"
+        },
+    
+    
+    "http:\/\/bee.pangolin-fence.ts.net:1313\/": {
+        
+        "title": "Academic Systems Consulting",
+            "tags": [],
+    "content": "About Academic Systems Consulting partners with universities and tertiary institutions to enhance academic quality and operational effectiveness.\nLed by a PhD-qualified higher education specialist, we bring deep expertise in learning analytics, academic governance, and IT-enabled business analysis.\nOur approach is grounded in research and a commitment to the student experience.\nWhat We Do Learning Analytics \u0026amp; Surveys: Design and interpret institution-wide surveys, learning analytics, and engagement data to inform strategy and improve outcomes. Policy \u0026amp; Risk Analysis: Review and strengthen policy frameworks, identify risk, and recommend pragmatic controls that align with regulatory compliance. Business Process Improvement: Map and analyse academic and administrative processes to reduce staff workload, streamline systems, and deliver measurable efficiency gains. Automation \u0026amp; IT Project Support: Plan and oversee automation initiatives, provide corrective input to IT projects, and ensure technology delivers on academic and operational needs. Student Experience Consultation: Facilitate student feedback processes and translate insights into actionable recommendations that enhance satisfaction and success. Why Choose Us Student-Centred: Every engagement keeps student learning and wellbeing at the core. Evidence-Driven: Data analysis and academic research underpin all recommendations. Collaborative: We work with academic and professional staff to co-create sustainable solutions. Compliance Ready: Expertise in TEQSA, ESOS, and ASQA ensuring regulatory obligations are upheld. Outcomes You Can Expect Reduced Administrative Burden Clearer staff workload allocation and simplified processes.\nProject Rescue Identify next steps in stalled projects to get initiatives back on track.\nRealistic Policies \u0026amp; Processes Policies and processes that support strategic and academic goals.\nSystems \u0026amp; Dashboards Dashboards aligned to the academic user experience.\nData-Informed Decisions Insights and analytics that elevate the student experience.\nContact Ready to strengthen academic quality and streamline operations?\nEmail info@assureeducation.com.au\nPhone +61 4XX XXX XXX +++ title = \u0026ldquo;Academic Systems Consulting\u0026rdquo; description = \u0026ldquo;Student-centric design for higher education quality and efficiency\u0026rdquo; +++\nAbout Academic Systems Consulting partners with universities and tertiary institutions to enhance academic quality and operational effectiveness.\nLed by a PhD-qualified higher education specialist, we bring deep expertise in learning analytics, academic governance, and IT-enabled business analysis.\nOur approach is grounded in research and a commitment to the student experience.\nWhat We Do Learning Analytics \u0026amp; Surveys: Design and interpret institution-wide surveys, learning analytics, and engagement data to inform strategy and improve outcomes. Policy \u0026amp; Risk Analysis: Review and strengthen policy frameworks, identify risk, and recommend pragmatic controls that align with regulatory compliance. Business Process Improvement: Map and analyse academic and administrative processes to reduce staff workload, streamline systems, and deliver measurable efficiency gains. Automation \u0026amp; IT Project Support: Plan and oversee automation initiatives, provide corrective input to IT projects, and ensure technology delivers on academic and operational needs. Student Experience Consultation: Facilitate student feedback processes and translate insights into actionable recommendations that enhance satisfaction and success. Why Choose Us Student-Centred: Every engagement keeps student learning and wellbeing at the core. Evidence-Driven: Data analysis and academic research underpin all recommendations. Collaborative: We work with academic and professional staff to co-create sustainable solutions. Compliance Ready: Expertise in TEQSA, ESOS, and ASQA ensuring regulatory obligations are upheld. Outcomes You Can Expect Reduced Administrative Burden Clearer staff workload allocation and simplified processes.\nProject Rescue Identify next steps in stalled projects to get initiatives back on track.\nRealistic Policies \u0026amp; Processes Policies and processes that support strategic and academic goals.\nSystems \u0026amp; Dashboards Dashboards aligned to the academic user experience.\nData-Informed Decisions Insights and analytics that elevate the student experience.\nContact Ready to strengthen academic quality and streamline operations?\nEmail info@assureeducation.com.au\nPhone +61 4XX XXX XXX\n", 
+    "url": "http:\/\/bee.pangolin-fence.ts.net:1313\/",
+    "image": "",
+    "description": "Student-centric design for higher education quality and efficiency"
+        },
+    
+    
+    "http:\/\/bee.pangolin-fence.ts.net:1313\/categories\/": {
+        
+        "title": "Categories",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/bee.pangolin-fence.ts.net:1313\/categories\/",
+    "image": "",
+    "description": ""
+        },
+    
+    
+    "http:\/\/bee.pangolin-fence.ts.net:1313\/tags\/": {
+        
+        "title": "Tags",
+            "tags": [],
+    "content": "", 
+    "url": "http:\/\/bee.pangolin-fence.ts.net:1313\/tags\/",
+    "image": "",
+    "description": ""
+        },
+    
+    }
+</script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+
+</footer></body>
+</html>

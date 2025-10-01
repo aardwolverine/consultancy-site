@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="/images/fav/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/fav/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="/images/fav/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="/images/fav/site.webmanifest" rel="manifest"/>
+    <title>Data Analysis | Academic Services Consulting</title>
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/custom.css" rel="stylesheet"/>
+    
+</head><body>
+    <header class="site-header">
+    <div class="container nav-container">
+        
+    <div class="logo h-card">
+        <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+        
+        </a>
+    </div>
+</header>
+
+    
+    
+ <a href="http://bee.pangolin-fence.ts.net:1313/" class="hero-link">
+    <section class="hero"
+    style='background-image: url("/images/data.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+        <div>
+            <h1 class="p-name" id="textOverlay">Data Analysis</h1>
+        </div>
+    </section>
+ </a>
+    <main class="post h-entry container row">
+        <div class="post">
+            <div class="post-data row">
+
+                <span rel="author" class="p-author h-card">
+                    <img class="u-photo hidden" src="" />
+                    <span class="p-name hidden" rel="me"></span>
+                </span>
+            </div>
+            <div class="e-content">
+                <h2 id="data-analysis">Data Analysis</h2>
+<p>Data is central to effective decision-making in higher education, yet turning raw information into meaningful insights is often challenging. Our Data Analysis service enables institutions to not only understand the data they hold, but also to translate it into clear, usable outputs. We support leaders, managers, and academics by ensuring that data is accurate, purposeful, and presented in ways that align with institutional priorities.</p>
+<p>Rather than drowning in lengthy or complex reports, we help you focus on essentials: what the data reveals, why it matters, and how it can be applied. With improved clarity and strategic alignment, data becomes a driver of continuous improvement, stronger governance, and informed planning across teaching, learning, and compliance activities.</p>
+<h2 id="what-we-do">What We Do</h2>
+<p>Our services ensure that complex information is delivered in practical, targeted ways that support action:</p>
+<ul>
+<li>
+<p>Data analysis – identifying trends, risks, and opportunities that directly inform decision-making and compliance needs</p>
+</li>
+<li>
+<p>Dashboard specifications – creating simple, accessible tools that present key indicators in real time to the right audiences</p>
+</li>
+<li>
+<p>Committee reports – producing concise, evidence-based reports that support academic governance, senior leadership, and executive oversight</p>
+</li>
+<li>
+<p>Analytic advice – providing nuanced guidance on how to use data for strategic planning, performance tracking, and regulatory reporting</p>
+</li>
+</ul>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>Institutions must comply with TEQSA, ASQA, and ESOS regulations, all of which require dependable evidence about performance and quality. Beyond compliance, however, well-structured analysis equips staff to make informed decisions about curriculum design, resource allocation, student support, and institutional strategy.</p>
+<p>Our approach transforms data into a shared institutional asset. Leaders gain confidence in governance decisions, committees receive clear reporting, and staff enjoy streamlined processes that cut through complexity. By embedding clarity and accountability into reporting, we reduce risk, enhance efficiency, and enable institutions to act decisively on the insights their data provides.</p>
+<div class="contact">
+    <h1>Contact</h1>
+    <p>Ready to strengthen academic quality and streamline operations?</p>
+    <p>
+        <strong>Email us at</strong>
+        <a href="mailto:info@acadsys.com.au">info@acadsys.com.au</a>
+        to arrange a Teams call to discuss your consulting requirements.
+    </p>
+</div>
+
+
+
+
+
+                
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function adjustTextColor(sectionId) {
+            const section = document.getElementById(sectionId);
+            const style = window.getComputedStyle(section);
+            const imageUrl = style
+                .backgroundImage
+                .slice(4, -1)
+                .replace(/["']/g, "");
+            const image = new Image();
+            image.src = imageUrl;
+            image.onload = function () {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = image.width;
+                canvas.height = image.height;
+                context.drawImage(image, 0, 0, image.width, image.height);
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                let r = 0,
+                    g = 0,
+                    b = 0;
+                for (let i = 0; i < data.length; i += 4) {
+                    r += data[i];
+                    g += data[i + 1];
+                    b += data[i + 2];
+                }
+                r /= (data.length / 4);
+                g /= (data.length / 4);
+                b /= (data.length / 4);
+                const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+                const textColor = brightness > 128
+                    ? 'black'
+                    : 'white';
+                const shadowColor = brightness > 128
+                    ? 'rgba(255, 255, 255, 0.7)'
+                    : 'rgba(0, 0, 0, 0.7)';
+                const textOverlay = document.getElementById('textOverlay');
+                textOverlay.style.color = textColor;
+                textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+            };
+        }
+        
+        adjustTextColor('heroSection');
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry
+                        .target
+                        .getAttribute('id');
+
+                    if (entry.intersectionRatio > 0) {
+                        clearActiveStatesInTableOfContents();
+                        document
+                            .querySelector(`nav li a[href="#${id}"]`)
+                            .parentElement
+                            .classList
+                            .add('active');
+                    }
+                });
+            });
+            document
+                .querySelectorAll('h1[id],h2[id],h3[id],h4[id]')
+                .forEach((section) => {
+                    observerForTableOfContentActiveState.observe(section);
+                });
+
+        });
+
+        function clearActiveStatesInTableOfContents() {
+            document
+                .querySelectorAll('nav li')
+                .forEach((section) => {
+                    section
+                        .classList
+                        .remove('active');
+                });
+        }
+    </script>
+
+    <footer>
+    <div class="footer-container">
+        <div class="social-media">
+            
+        </div>
+        <div class="logo h-card">
+            <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+                <img class="site-logo light-logo" src="/images/logo/logo-light.png" alt="Light Logo">
+                <img class="site-logo dark-logo" src="/images/logo/logo-dark.png" alt="Dark Logo">
+            </a>
+            <p>© 2025 Academic Services Consulting</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

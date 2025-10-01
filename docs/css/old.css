@@ -1,0 +1,297 @@
+/* ==========================================================================
+   Custom Styles to Extend Quint Theme
+   - Logo switching (light/dark)
+   - Color palette
+   - Header & navigation
+   - Hero section
+   - Buttons, cards, links
+   - Sections, typography, footer
+   - Responsive adjustments
+   ========================================================================== */
+
+/* ---------- Global Color Variables ---------- */
+:root {
+    /* Colors - Light Mode */
+    --primary-bg: #F8FAFB;            
+    --section-bg: #EDF1F4;            
+    --primary-text: #353d49;          
+    --secondary-text: #F0F4F8;        
+    --link-color: #05739C;            
+    --primary-color: #05739C;         
+    --secondary-color: #FF9F1C;       
+    --neutral-accent: #F5E9DA;        
+    --complimentary-dark: #1F2A33;    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors - Dark Mode */
+        --primary-bg: #12181C;
+        --section-bg: #1E2429;
+        --primary-text: #fff;
+        --secondary-text: #1F2A33;
+        --link-color: #05739C;
+        --primary-color: #05739C;
+        --secondary-color: #FF9F1C;
+        --neutral-accent: #F5E9DA;
+        --complimentary-dark: #1F2A33;
+    }
+
+    img {
+        opacity: 90%;
+    }
+}
+
+/* ---------- Homepage Wrapper ---------- */
+.homepage-content-wrapper {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.homepage-content-wrapper h1,
+.homepage-content-wrapper h2,
+.homepage-content-wrapper h3,
+.homepage-content-wrapper p {
+    text-align: center;
+}
+
+/* ---------- Header & Logo ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--section-bg);
+    border-bottom: 1px solid var(--neutral-accent);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- Navigation ---------- */
+nav.menu ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.menu ul li {
+    margin: 0;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+nav.menu a:hover,
+nav.menu a:focus {
+    color: var(--primary-color);
+}
+
+nav.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+nav.menu a:hover::after,
+nav.menu a:focus::after {
+    width: 100%;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background-color: var(--section-bg);
+    background-size: cover;
+    background-position: center;
+    min-height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    color: var(--primary-text);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p,
+.hero .subtitle {
+    color: var(--secondary-text);
+    margin: 0.5rem 0;
+}
+
+/* ---------- Buttons ---------- */
+button, .btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-text);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-bg);
+}
+
+/* ---------- Cards ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--neutral-accent);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.card .text {
+    padding: 1rem;
+}
+
+.card h2 {
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+}
+
+.card .small {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+/* ---------- Links ---------- */
+a, a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--secondary-color);
+}
+
+/* ---------- Contact Section ---------- */
+.contact {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--section-bg);
+}
+
+/* ---------- Sections / Containers ---------- */
+.section,
+.container {
+    background-color: var(--section-bg);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-text);
+}
+
+p, span, li {
+    color: var(--secondary-text);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--section-bg);
+    color: var(--primary-text);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--link-color);
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* === Light/Dark Logo Toggle === */
+.site-logo {
+    height: 600px;
+    width: auto;
+    object-fit: contain;
+}
+
+.light-logo {
+    display: block;   /* show in light mode */
+}
+
+.dark-logo {
+    display: none;    /* hide in light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+    .light-logo {
+        display: none; /* hide light logo in dark mode */
+    }
+    .dark-logo {
+        display: block; /* show dark logo in dark mode */
+    }
+}
+

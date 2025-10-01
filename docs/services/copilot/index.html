@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html><head><script src="/consultancy-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=consultancy-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="/images/fav/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/fav/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="/images/fav/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="/images/fav/site.webmanifest" rel="manifest"/>
+    <title>Team &amp; Individualised Copilot Mentoring | Academic Services Consulting</title>
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/custom.css" rel="stylesheet"/>
+    
+</head><body>
+    <header class="site-header">
+    <div class="container nav-container">
+        
+    <div class="logo h-card">
+        <a class="u-url" href="http://localhost:1313/consultancy-site/">
+        
+        </a>
+    </div>
+</header>
+
+    
+    
+ <a href="http://localhost:1313/consultancy-site/" class="hero-link">
+    <section class="hero"
+    style='background-image: url("/consultancy-site/images/project.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+        <div>
+            <h1 class="p-name" id="textOverlay">Team &amp; Individualised Copilot Mentoring</h1>
+        </div>
+    </section>
+ </a>
+    <main class="post h-entry container row">
+        <div class="post">
+            <div class="post-data row">
+
+                <span rel="author" class="p-author h-card">
+                    <img class="u-photo hidden" src="" />
+                    <span class="p-name hidden" rel="me"></span>
+                </span>
+            </div>
+            <div class="e-content">
+                <h2 id="copilot-for-process-improvement-training">Copilot for Process Improvement Training</h2>
+<p>Our Copilot for Process Improvement Training empowers professionals in higher education to effectively integrate AI tools into their daily workflows. By focusing on real-world challenges such as policy interpretation, compliance reporting, and data-driven decision making, we provide training that is practical, sector-specific, and outcomes-oriented.</p>
+<p>This training goes beyond learning how to prompt Copilot—it develops advanced skills in:</p>
+<ul>
+<li>
+<p>Using Copilot to analyse compliance risks in TEQSA, ASQA, and ESOS-related processes</p>
+</li>
+<li>
+<p>Streamlining reporting and documentation with structured AI assistance</p>
+</li>
+<li>
+<p>Identifying automation opportunities where Copilot can reduce workload complexity</p>
+</li>
+<li>
+<p>Building confidence in responsible AI use within regulated environments</p>
+</li>
+</ul>
+<p>By the end of the training, participants will have the confidence to integrate AI into critical processes and apply it responsibly in ways that enhance both precision and efficiency.</p>
+<h2 id="individual-and-team-copilot-mentoring">Individual and Team Copilot Mentoring</h2>
+<p>To embed lasting impact, we also offer tailored mentoring for individuals and teams who wish to go deeper into practical adoption of AI tools. Mentoring provides ongoing, hands-on support that helps participants refine their skills and ensure Copilot is applied strategically in their context.</p>
+<p>Through mentoring, we work with:</p>
+<ul>
+<li>
+<p>Individuals, helping them adopt Copilot for their role-specific tasks such as policy analysis, compliance reporting, student engagement monitoring, or academic quality reviews</p>
+</li>
+<li>
+<p>Teams, enabling group-wide alignment on Copilot use, fostering collaboration, and ensuring that automation and reporting practices remain sustainable and scalable</p>
+</li>
+</ul>
+<p>Our mentoring approach ensures consistent skill-building, reduces reliance on trial-and-error learning, and supports teams in shaping a culture of responsible AI adoption while managing compliance risks.</p>
+<p>Mentoring is customised for the needs of higher education professionals, from compliance staff to academic quality teams, ensuring that every individual gains tangible, immediately useful outcomes.</p>
+<div class="contact">
+    <h1>Contact</h1>
+    <p>Ready to strengthen academic quality and streamline operations?</p>
+    <p>
+        <strong>Email us at</strong>
+        <a href="mailto:info@acadsys.com.au">info@acadsys.com.au</a>
+        to arrange a Teams call to discuss your consulting requirements.
+    </p>
+</div>
+
+
+
+
+
+                
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function adjustTextColor(sectionId) {
+            const section = document.getElementById(sectionId);
+            const style = window.getComputedStyle(section);
+            const imageUrl = style
+                .backgroundImage
+                .slice(4, -1)
+                .replace(/["']/g, "");
+            const image = new Image();
+            image.src = imageUrl;
+            image.onload = function () {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = image.width;
+                canvas.height = image.height;
+                context.drawImage(image, 0, 0, image.width, image.height);
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                let r = 0,
+                    g = 0,
+                    b = 0;
+                for (let i = 0; i < data.length; i += 4) {
+                    r += data[i];
+                    g += data[i + 1];
+                    b += data[i + 2];
+                }
+                r /= (data.length / 4);
+                g /= (data.length / 4);
+                b /= (data.length / 4);
+                const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+                const textColor = brightness > 128
+                    ? 'black'
+                    : 'white';
+                const shadowColor = brightness > 128
+                    ? 'rgba(255, 255, 255, 0.7)'
+                    : 'rgba(0, 0, 0, 0.7)';
+                const textOverlay = document.getElementById('textOverlay');
+                textOverlay.style.color = textColor;
+                textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+            };
+        }
+        
+        adjustTextColor('heroSection');
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry
+                        .target
+                        .getAttribute('id');
+
+                    if (entry.intersectionRatio > 0) {
+                        clearActiveStatesInTableOfContents();
+                        document
+                            .querySelector(`nav li a[href="#${id}"]`)
+                            .parentElement
+                            .classList
+                            .add('active');
+                    }
+                });
+            });
+            document
+                .querySelectorAll('h1[id],h2[id],h3[id],h4[id]')
+                .forEach((section) => {
+                    observerForTableOfContentActiveState.observe(section);
+                });
+
+        });
+
+        function clearActiveStatesInTableOfContents() {
+            document
+                .querySelectorAll('nav li')
+                .forEach((section) => {
+                    section
+                        .classList
+                        .remove('active');
+                });
+        }
+    </script>
+
+    <footer>
+    <div class="footer-container">
+        <div class="social-media">
+            
+        </div>
+        <div class="logo h-card">
+            <a class="u-url" href="http://localhost:1313/consultancy-site/">
+                <img class="site-logo light-logo" src="/images/logo/logo-light.png" alt="Light Logo">
+                <img class="site-logo dark-logo" src="/images/logo/logo-dark.png" alt="Dark Logo">
+            </a>
+            <p>© 2025 Academic Services Consulting</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

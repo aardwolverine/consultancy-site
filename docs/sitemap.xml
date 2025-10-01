@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/consultancy-site/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/analysis/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/data/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/policy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/project/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/students/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/consultancy-site/services/copilot/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="/images/fav/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/fav/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="/images/fav/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+    <link href="/images/fav/site.webmanifest" rel="manifest"/>
+    <title>Policy &amp; Risk | Academic Services Consulting</title>
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/custom.css" rel="stylesheet"/>
+    
+</head><body>
+    <header class="site-header">
+    <div class="container nav-container">
+        
+    <div class="logo h-card">
+        <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+        
+        </a>
+    </div>
+</header>
+
+    
+    
+ <a href="http://bee.pangolin-fence.ts.net:1313/" class="hero-link">
+    <section class="hero"
+    style='background-image: url("/images/survey.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;'
+    id="heroSection" onload="adjustTextColor(this)">
+        <div>
+            <h1 class="p-name" id="textOverlay">Policy &amp; Risk</h1>
+        </div>
+    </section>
+ </a>
+    <main class="post h-entry container row">
+        <div class="post">
+            <div class="post-data row">
+
+                <span rel="author" class="p-author h-card">
+                    <img class="u-photo hidden" src="" />
+                    <span class="p-name hidden" rel="me"></span>
+                </span>
+            </div>
+            <div class="e-content">
+                <h2 id="policy--risk">Policy &amp; Risk</h2>
+<p>Effective governance in higher education relies on clear, compliant, and operationally sound policies. Yet as regulations evolve under TEQSA, ASQA, and ESOS standards, institutions often face gaps between policy intent and actual practice. Our Policy &amp; Risk service bridges this gap, ensuring policies are not only compliant on paper but also practical and enforceable in daily operations.</p>
+<p>Through detailed business process analysis, we assess institutional policies and regulatory procedures to identify compliance threats, operational risks, and process inefficiencies. This approach creates a strong link between governance, compliance, and the lived realities of staff and students, reducing the risk of exposure during audits or external reviews.</p>
+<h2 id="what-we-do">What We Do</h2>
+<p>Our evidence-based methodology delivers clear and actionable improvements:</p>
+<ul>
+<li>
+<p>Policy alignment assessments – reviewing policies and procedures against TEQSA, ASQA, and ESOS standards</p>
+</li>
+<li>
+<p>Risk detection – identifying systemic, operational, and compliance risks that may undermine institutional performance</p>
+</li>
+<li>
+<p>Process mapping – ensuring policies translate effectively into streamlined operational practices</p>
+</li>
+<li>
+<p>Evidence-based improvements – embedding practical solutions to improve compliance and efficiency</p>
+</li>
+<li>
+<p>Governance strengthening – supporting executive leaders in implementing reforms that reduce risk and reinforce accountability</p>
+</li>
+</ul>
+<h2 id="translating-your-strategy--operational-planning-workshops">Translating Your Strategy – Operational Planning Workshops</h2>
+<p>Many strategies fail not because of poor vision, but because of ineffective translation into actionable plans. We facilitate tailored Operational Planning Workshops that help leadership teams break down strategy into achievable, measurable priorities.</p>
+<p>Our facilitation approach includes:</p>
+<ul>
+<li>
+<p>Establishing clear accountability pathways</p>
+</li>
+<li>
+<p>Setting realistic timeframes and resourcing</p>
+</li>
+<li>
+<p>Connecting strategic goals with compliance and policy requirements</p>
+</li>
+<li>
+<p>Building processes that ensure responsibility is shared and progress visible</p>
+</li>
+</ul>
+<p>This ensures that institutional strategies are fully embedded into operations, supported by governance structures, and resilient against compliance risks.</p>
+<div class="contact">
+    <h1>Contact</h1>
+    <p>Ready to strengthen academic quality and streamline operations?</p>
+    <p>
+        <strong>Email us at</strong>
+        <a href="mailto:info@acadsys.com.au">info@acadsys.com.au</a>
+        to arrange a Teams call to discuss your consulting requirements.
+    </p>
+</div>
+
+
+
+
+
+                
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function adjustTextColor(sectionId) {
+            const section = document.getElementById(sectionId);
+            const style = window.getComputedStyle(section);
+            const imageUrl = style
+                .backgroundImage
+                .slice(4, -1)
+                .replace(/["']/g, "");
+            const image = new Image();
+            image.src = imageUrl;
+            image.onload = function () {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = image.width;
+                canvas.height = image.height;
+                context.drawImage(image, 0, 0, image.width, image.height);
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                let r = 0,
+                    g = 0,
+                    b = 0;
+                for (let i = 0; i < data.length; i += 4) {
+                    r += data[i];
+                    g += data[i + 1];
+                    b += data[i + 2];
+                }
+                r /= (data.length / 4);
+                g /= (data.length / 4);
+                b /= (data.length / 4);
+                const brightness = Math.sqrt(0.299 * r * r + 0.587 * g * g + 0.114 * b * b);
+                const textColor = brightness > 128
+                    ? 'black'
+                    : 'white';
+                const shadowColor = brightness > 128
+                    ? 'rgba(255, 255, 255, 0.7)'
+                    : 'rgba(0, 0, 0, 0.7)';
+                const textOverlay = document.getElementById('textOverlay');
+                textOverlay.style.color = textColor;
+                textOverlay.style.textShadow = `0 0 5px ${shadowColor}, 0 0 10px ${shadowColor}, 0 0 20px ${shadowColor}, 0 0 40px ${shadowColor}, 0 0 80px ${shadowColor}, 0 0 90px ${shadowColor}, 0 0 100px ${shadowColor}, 0 0 150px ${shadowColor}`;
+            };
+        }
+        
+        adjustTextColor('heroSection');
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry
+                        .target
+                        .getAttribute('id');
+
+                    if (entry.intersectionRatio > 0) {
+                        clearActiveStatesInTableOfContents();
+                        document
+                            .querySelector(`nav li a[href="#${id}"]`)
+                            .parentElement
+                            .classList
+                            .add('active');
+                    }
+                });
+            });
+            document
+                .querySelectorAll('h1[id],h2[id],h3[id],h4[id]')
+                .forEach((section) => {
+                    observerForTableOfContentActiveState.observe(section);
+                });
+
+        });
+
+        function clearActiveStatesInTableOfContents() {
+            document
+                .querySelectorAll('nav li')
+                .forEach((section) => {
+                    section
+                        .classList
+                        .remove('active');
+                });
+        }
+    </script>
+
+    <footer>
+    <div class="footer-container">
+        <div class="social-media">
+            
+        </div>
+        <div class="logo h-card">
+            <a class="u-url" href="http://bee.pangolin-fence.ts.net:1313/">
+                <img class="site-logo light-logo" src="/images/logo/logo-light.png" alt="Light Logo">
+                <img class="site-logo dark-logo" src="/images/logo/logo-dark.png" alt="Dark Logo">
+            </a>
+            <p>© 2025 Academic Services Consulting</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
