@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/consultancy-site/</loc>
+    <loc>https://acadsys.com.au/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/analysis/</loc>
+    <loc>https://acadsys.com.au/services/analysis/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/categories/</loc>
+    <loc>https://acadsys.com.au/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/data/</loc>
+    <loc>https://acadsys.com.au/services/data/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/policy/</loc>
+    <loc>https://acadsys.com.au/services/policy/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/project/</loc>
+    <loc>https://acadsys.com.au/services/project/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/</loc>
+    <loc>https://acadsys.com.au/services/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/students/</loc>
+    <loc>https://acadsys.com.au/services/students/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/tags/</loc>
+    <loc>https://acadsys.com.au/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/consultancy-site/services/copilot/</loc>
+    <loc>https://acadsys.com.au/services/copilot/</loc>
   </url>
 </urlset>
