@@ -1,9 +1,9 @@
 publishDir = "docs"
-baseURL = 'https://aardwolverine.github.io/'
-# baseURL = 'https://acadsys.com.au'
+# baseURL = 'https://aardwolverine.github.io/consultancy-site'
+baseURL = 'https://acadsys.com.au'
 languageCode = 'en-us'
 
-title = "Academic Services Consulting"
+title = "Academic Systems Consulting"
 theme = "quint"
 
 [params]
