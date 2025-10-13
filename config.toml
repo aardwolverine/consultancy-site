@@ -1,5 +1,5 @@
 publishDir = "docs"
-baseURL = 'https://aardwolverine.github.io/consultancy-site'
+baseURL = 'https://aardwolverine.github.io/'
 # baseURL = 'https://acadsys.com.au'
 languageCode = 'en-us'
 
