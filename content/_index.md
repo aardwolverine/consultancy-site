@@ -1,7 +1,15 @@
 +++
 title = "Academic Systems Consulting"
-description = 
-keywords = ["Consulting", "Higher Education", "VET", "NCVER", "TEQSA", "tertiary education", "vocational education", "data analysis", "student voice", "regulatory compliance", "external referencing", "benchmarking", "student success", "course accreditation", "psychology expert review"]
+description = "Academic Systems Consulting provide expert project support for Higher Education and Vocational Education institutions to meet regulatory requirements, quality assurance, and support student success. Contact us today for a consultation on your current challenges."
+keywords = [
+  "RTO Compliance Consulting", 
+  "AI and Academic Misconduct Monitoring",
+  "Higher Ed Digital Transformation", 
+  "Tertiary Education Strategy",
+  "Student Management Dashboards and Data",
+  "Student Equity, Inclusion, and Benchmarking",
+  "Quality Assurance VET Sector Australia"
+]
 +++
 
 ## Higher education consulting with a difference

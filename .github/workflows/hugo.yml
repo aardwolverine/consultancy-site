@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0    # This enables Git history for lastmod
-          submodules: true
+          submodules: recursive
           lfs: true
 
       - name: Setup Hugo
