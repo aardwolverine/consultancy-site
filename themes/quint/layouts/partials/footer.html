@@ -1,0 +1,18 @@
+<footer>
+    <div class="footer-container">
+        <div class="social-media">
+            {{ range site.Params.social }}
+                <a href="{{ .url }}"><img alt="{{ .name }}" src="{{ .icon }}"/></a>
+            {{ end }}
+        </div>
+        <div class="logo h-card">
+            <a class="u-url" href="{{ .Site.Home.Permalink }}">
+                <img class="site-logo light-logo" src="/images/logo/logo-light.png" alt="Light Logo">
+                <img class="site-logo dark-logo" src="/images/logo/logo-dark.png" alt="Dark Logo">
+            </a>
+            <p>© {{ now.Format "2006" }} {{ .Site.Title }}</p>
+        </div>
+    </div>
+</footer>
+
+

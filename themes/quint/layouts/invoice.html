@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice {{ .client }}</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; margin: 40px; }
+    header { display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #05739C; padding-bottom:20px; margin-bottom:30px; }
+    header img { max-height:80px; }
+    table { width:100%; border-collapse:collapse; margin-top:20px; }
+    th, td { border-bottom:1px solid #ccc; padding:8px; text-align:left; }
+    th { background:#EDF1F4; }
+    .totals { text-align:right; font-weight:bold; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="static/images/logo/logo-light.png" alt="Academic Systems Consultancy">
+    <div style="text-align:right;">
+      <h1>Academic Systems Consultancy</h1>
+      <div>Email: info@acadsys.com.au</div>
+      <div>Website: https://acadsys.com.au</div>
+    </div>
+  </header>
+
+  <h2>Invoice</h2>
+  <p><strong>Client:</strong> {{ .client }}<br>
+     <strong>Email:</strong> {{ .email }}<br>
+     <strong>Date:</strong> {{ .date }}<br>
+     <strong>Due:</strong> {{ .due_date }}</p>
+
+  <table>
+    <thead>
+      <tr><th>Description</th><th>Hours</th><th>Rate</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      {{ $total := 0 }}
+      {{ range .items }}
+        {{ $line := mul .hours .rate }}
+        <tr>
+          <td>{{ .description }}</td>
+          <td>{{ .hours }}</td>
+          <td>${{ .rate }}</td>
+          <td>${{ $line }}</td>
+        </tr>
+        {{ $total = add $total $line }}
+      {{ end }}
+    </tbody>
+  </table>
+
+  <p class="totals">Total: ${{ $total }}</p>
+  <p>{{ .notes }}</p>
+</body>
+</html>
+

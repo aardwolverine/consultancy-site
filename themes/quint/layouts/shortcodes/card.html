@@ -1,0 +1,10 @@
+<div class="card">
+  {{ $alt := .Get "alt" | default "Card image" }}
+  {{ with .Get "image" }}
+    <img src="{{ . | relURL }}" alt="{{ $alt }}">
+  {{ end }}
+  <div class="card-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+

@@ -1,5 +1,7 @@
 +++
 title = "Academic Systems Consulting"
+description = 
+keywords = ["Consulting", "Higher Education", "VET", "NCVER", "TEQSA", "tertiary education", "vocational education", "data analysis", "student voice", "regulatory compliance", "external referencing", "benchmarking", "student success", "course accreditation", "psychology expert review"]
 +++
 
 ## Higher education consulting with a difference

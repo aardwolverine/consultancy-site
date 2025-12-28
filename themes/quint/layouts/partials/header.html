@@ -1,0 +1,12 @@
+<header class="site-header">
+    <div class="container nav-container">
+        <!-- Logo -->
+    <div class="logo h-card">
+        <a class="u-url" href="{{ .Site.Home.Permalink }}">
+        {{ if ne .Section "services" }}
+            <img class="site-logo light-logo" src="/images/logo/logo-light.png" alt="Light Logo">
+            <img class="site-logo dark-logo" src="/images/logo/logo-dark.png" alt="Dark Logo">
+        {{end}}
+        </a>
+    </div>
+</header>

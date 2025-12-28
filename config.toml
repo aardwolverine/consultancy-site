@@ -14,4 +14,12 @@ css = ["css/custom.css"]
   [markup.goldmark.renderer]
     unsafe = true
 
+[sitemap]
+  changeFreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
 
+enableGitIbfo = true
+
+[frontmatter]
+  lastmod = ['lastmod', ':git', 'publishDate', 'date']
