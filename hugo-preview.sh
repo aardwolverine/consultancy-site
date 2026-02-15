@@ -1,2 +1,3 @@
 #!/bin/bash
-hugo server -D --bind=0.0.0.0 --baseURL=http://bee.pangolin-fence.ts.net:1313/
+# Local preview for Hugo. Use localhost to avoid embedding local network hostnames in generated builds.
+hugo server -D --bind=0.0.0.0 --baseURL=http://localhost:1313/
