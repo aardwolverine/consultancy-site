@@ -1,0 +1,24 @@
+<!-- SEO & Open Graph meta tags -->
+{{ $defaultDesc := .Site.Params.description }}
+{{ $desc := cond (ne .Params.description "") .Params.description (cond (ne .Description "") .Description $defaultDesc) }}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ if ne .Title .Site.Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+{{ with cond (ne .Params.images nil) .Params.images (cond (ne .Params.image "") (slice .Params.image) nil) }}
+  {{ $img := index . 0 }}
+  <meta property="og:image" content="{{ $img }}">
+{{ end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{ with .Site.Params.twitter }}<meta name="twitter:site" content="{{ . }}">{{ end }}
+<meta name="robots" content="{{ if .Params.noindex }}noindex, nofollow{{ else }}index, follow{{ end }}">
+
+<!-- JSON-LD Organization -->
+{{ $org := dict "@context" "https://schema.org" "@type" "Organization" "name" .Site.Title "url" .Site.BaseURL }}
+{{ with .Site.Params.logo }}{{ $org = merge $org (dict "logo" .) }}{{ end }}
+<script type="application/ld+json">{{ $org | jsonify }}</script>
