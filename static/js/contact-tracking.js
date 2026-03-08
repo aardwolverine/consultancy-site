@@ -27,12 +27,13 @@
 
     var href = a.getAttribute('href') || '';
     var email = href.replace(/^mailto:/i,'').split('?')[0];
+    var email_obf = email.replace(/(.).+@/,'$1***@');
 
     // push safe event to GTM dataLayer (no PII to Google)
-    safePushToDataLayer('contact_email_click', { email_obfuscated: email.replace(/(.).+@/,'$1***@') });
+    safePushToDataLayer('contact_email_click', { email_obfuscated: email_obf });
 
-    // send event to Matomo (full email as label) - remove full email if you prefer no PII stored
-    pushToMatomo('Contact','Email Click', email);
+    // send event to Matomo (obfuscated email as label to avoid storing full PII)
+    pushToMatomo('Contact','Email Click', email_obf);
   }, false);
 
   // copy detection for user-highlight-and-copy
@@ -45,8 +46,9 @@
     if(!emailMatch) return;
     lastFired.copy = t;
     var email = emailMatch[0];
+    var email_obf = email.replace(/(.).+@/,'$1***@');
 
-    safePushToDataLayer('contact_email_copy', { email_obfuscated: email.replace(/(.).+@/,'$1***@') });
-    pushToMatomo('Contact','Email Copy', email);
+    safePushToDataLayer('contact_email_copy', { email_obfuscated: email_obf });
+    pushToMatomo('Contact','Email Copy', email_obf);
   }, false);
 })();
