@@ -2,8 +2,11 @@
 <html>
     {{- partial "head.html" . -}}
 <body>
+    {{ partial "gtm_body.html" . }}
     {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
+    {{/* include contact-tracking and any extra site scripts before closing body */}}
+    <script src="/js/contact-tracking.js"></script>
     {{ partial "footer.html" . }}
 </body>
 </html>
