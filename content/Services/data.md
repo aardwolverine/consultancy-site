@@ -2,6 +2,9 @@
 title = "Data Analysis"
 image = "images/data.jpg"
 description = "Understand the data you have through data analysis, dashboard specifications, committee reporting, and analytic advice tailored for higher education institutions. Revise and streamline reports while building clarity and confidence in using your data to inform decisions, meet compliance requirements, and strengthen institutional outcomes."
+summary = "Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting."
+keywords = ["data analysis", "dashboards", "higher education analytics", "TEQSA reporting"]
+tags = ["data", "analytics", "dashboards"]
 +++
 
 ## Data Analysis
