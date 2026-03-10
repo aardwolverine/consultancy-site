@@ -2,6 +2,9 @@
 title = "Policy & Risk"
 image = "images/survey.jpg"
 description = "We assess policies and procedures against their implementation to detect compliance gaps and operational risks. Our evidence-based improvements strengthen governance, mitigate institutional risk, and enhance organisational efficiency."
+summary = "Policy and risk assessments for higher education — align policy with practice, reduce compliance gaps and operational risk."
+keywords = ["policy review", "risk assessment", "higher education", "compliance"]
+tags = ["policy", "risk", "compliance"]
 +++
 
 ## Policy & Risk
