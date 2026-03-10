@@ -253,6 +253,9 @@ header .logo img {
 
 .hero div {
     padding: 0 1rem;
+    /* Keep hero text centered and slightly wider than the main container/cards */
+    max-width: calc(800px + 1.5in);
+    margin: 0 auto;
 }
 
 .hero h1,
