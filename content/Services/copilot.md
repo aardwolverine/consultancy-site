@@ -2,6 +2,9 @@
 title = "Team & Individualised Copilot Mentoring"
 image = "images/project.jpg"
 description = "We provide specialised Copilot Training for process improvement and tailored mentoring for individuals and teams, equipping higher education professionals to harness AI effectively, enhance compliance, and optimise workflows."
+summary = "Copilot training and mentoring for higher education — practical AI adoption for compliance, reporting and process improvement."
+keywords = ["Copilot training", "AI mentoring", "higher education", "process improvement"]
+tags = ["ai", "copilot", "training"]
 +++
 
 ## Copilot for Process Improvement Training
