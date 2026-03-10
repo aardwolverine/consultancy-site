@@ -1,6 +1,7 @@
 <!-- SEO & Open Graph meta tags -->
 {{ $defaultDesc := .Site.Params.description }}
-{{ $desc := cond (ne .Params.description "") .Params.description (cond (ne .Description "") .Description $defaultDesc) }}
+{{ $contentFallback := cond (ne .Summary "") .Summary (cond (ne .Description "") .Description ( .Content | plainify | truncate 160 )) }}
+{{ $desc := cond (ne .Params.description "") .Params.description (cond (ne $contentFallback "") $contentFallback $defaultDesc) }}
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -22,3 +23,14 @@
 {{ $org := dict "@context" "https://schema.org" "@type" "Organization" "name" .Site.Title "url" .Site.BaseURL }}
 {{ with .Site.Params.logo }}{{ $org = merge $org (dict "logo" .) }}{{ end }}
 <script type="application/ld+json">{{ $org | jsonify }}</script>
+
+<!-- JSON-LD Service (for pages in the Services section) -->
+{{ if eq .Section "Services" }}
+  {{ $service := dict "@context" "https://schema.org" "@type" "Service" "name" .Title "description" $desc "url" .Permalink }}
+  {{ with .Params.image }}{{ $service = merge $service (dict "image" (print $.Site.BaseURL .)) }}{{ end }}
+  {{ with .Params.keywords }}{{ $service = merge $service (dict "keywords" (delimit . ", ")) }}{{ end }}
+  {{ $provider := dict "@type" "Organization" "name" .Site.Title "url" .Site.BaseURL }}
+  {{ with .Site.Params.logo }}{{ $provider = merge $provider (dict "logo" .) }}{{ end }}
+  {{ $service = merge $service (dict "provider" $provider) }}
+  <script type="application/ld+json">{{ $service | jsonify }}</script>
+{{ end }}
