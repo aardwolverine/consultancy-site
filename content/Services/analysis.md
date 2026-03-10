@@ -2,6 +2,9 @@
 title = "Business Process Analysis"
 image = "images/analysis.jpg"
 description = "We specialise in Business Process Analysis and Automation for the higher education sector, helping institutions meet TEQSA, ASQA, and ESOS standards with ease. By identifying risks and inefficiencies, we enable teams to automate data reporting and reduce manual workloads, transforming tasks that once took hours into minutes."
+summary = "Business process analysis & automation for higher education — reduce manual reporting, improve compliance and save staff time."
+keywords = ["business process analysis", "automation", "higher education", "TEQSA compliance"]
+tags = ["process", "automation", "compliance"]
 +++
 
 ## Business Process Analysis
