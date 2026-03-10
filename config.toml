@@ -9,6 +9,8 @@ theme = "quint"
 [params]
 numImages = 10
 css = ["css/custom.css"]
+# Add your reCAPTCHA site key here (set on deploy to avoid exposing keys in source)
+recaptcha_site_key = ""
 
 [markup]
   [markup.goldmark.renderer]

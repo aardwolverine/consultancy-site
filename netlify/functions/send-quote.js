@@ -44,6 +44,28 @@ exports.handler = async function(event, context) {
     html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`
   };
 
+  // If a reCAPTCHA token is present, verify it with Google before sending
+  const recaptchaToken = params.get('g-recaptcha-response') || '';
+  if (recaptchaToken && process.env.RECAPTCHA_SECRET) {
+    const fetch = require('node-fetch');
+    try {
+      const resp = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `secret=${encodeURIComponent(process.env.RECAPTCHA_SECRET)}&response=${encodeURIComponent(recaptchaToken)}`
+      });
+      const j = await resp.json();
+      if (!j.success || (j.score && j.score < 0.3)) {
+        // Rejected by reCAPTCHA
+        console.warn('Recaptcha failed', j);
+        return { statusCode: 200, body: 'OK' };
+      }
+    } catch (e) {
+      console.warn('Recaptcha verification error', e);
+      return { statusCode: 200, body: 'OK' };
+    }
+  }
+
   try {
     await transporter.sendMail(mailOptions);
     return {

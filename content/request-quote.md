@@ -27,6 +27,9 @@ keywords = ["request quote", "consulting quote", "higher education consulting"]
   <!-- Timestamp to help detect automated/bot submissions -->
   <input type="hidden" id="ts" name="ts" value="" />
 
+  <!-- Invisible reCAPTCHA token -->
+  <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="" />
+
   <button type="submit">Request Quote</button>
 </form>
 
@@ -72,12 +75,20 @@ keywords = ["request quote", "consulting quote", "higher education consulting"]
       return;
     }
 
-    // Send to serverless function
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    }).then(function(res){
-      if (res.ok) {
+      // Ensure reCAPTCHA token if available
+    (window._recaptcha && window.RECAPTCHA_SITE_KEY ? window._recaptcha.ensureLoaded(function(){
+      window._recaptcha.getToken('request_quote').then(function(token){
+        if (token) formData.set('g-recaptcha-response', token);
+        sendRequest(formData);
+      });
+    }) : sendRequest(formData));
+
+    function sendRequest(formData){
+      // Send to serverless function
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+        if (res.ok) {
         pushEvent('quote_submit_success');
         window.location = '/request-quote/received/';
       } else {
@@ -88,6 +99,7 @@ keywords = ["request quote", "consulting quote", "higher education consulting"]
       pushEvent('quote_submit_error');
       window.location = '/request-quote/received/';
     });
+  }
   });
 })();
 </script>
