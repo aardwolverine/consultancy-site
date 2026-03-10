@@ -19,10 +19,10 @@
                 <div class="text">
                     <h2 class="p-name">{{ .Title }}</h2>
                     <p class="small">
-                       {{ if  .Params.description }}
-                           {{ .Params.description }}
-                       {{ else }}
+                       {{ if  .Summary }}
                            {{ .Summary }}
+                       {{ else }}
+                           {{ .Content | plainify | truncate 160 }}
                        {{ end }}
                     </p>
                 </div>
