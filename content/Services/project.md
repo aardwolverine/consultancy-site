@@ -2,6 +2,9 @@
 title = "Project Support & Rescue"
 image = "images/planning.jpg"
 description = "We specialise in project rescue for stalled or underperforming projects in higher education by diagnosing root causes, identifying next steps, streamlining processes, and clarifying responsibilities so initiatives regain momentum and deliver results."
+summary = "Project rescue for higher education — diagnose root causes, streamline processes and restore momentum."
+keywords = ["project rescue", "higher education project management", "TEQSA compliance", "project recovery"]
+tags = ["project", "rescue", "higher-education"]
 +++
 
 ## Project Rescue
