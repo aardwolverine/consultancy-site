@@ -2,6 +2,9 @@
 title = "Student Evaluations & Engagement"
 image = "images/student.jpg"
 description = "Harness student evaluations and surveys to improve academic programs, strengthen student voice initiatives, and support governance through representative panels and councils. Transform the student voice into meaningful change."
+summary = "Student evaluations & engagement — design robust survey systems and reporting that inform teaching improvement and accreditation evidence."
+keywords = ["student evaluations", "surveys", "higher education", "accreditation"]
+tags = ["students", "surveys", "engagement"]
 +++
 
 ## Student Evaluations & Surveys
