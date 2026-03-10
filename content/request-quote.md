@@ -5,7 +5,7 @@ description = "Request a personalised quote from Academic Systems Consulting. Te
 keywords = ["request quote", "consulting quote", "higher education consulting"]
 +++
 
-<form id="request-quote-form" method="POST" action="/request-quote/submit/">
+<form id="request-quote-form" method="POST" action="/.netlify/functions/send-quote">
   <label for="name">Your name</label>
   <input type="text" id="name" name="name" required />
 
@@ -18,23 +18,76 @@ keywords = ["request quote", "consulting quote", "higher education consulting"]
   <label for="message">Project details (brief)</label>
   <textarea id="message" name="message" rows="6" required></textarea>
 
+  <!-- Honeypot field to trap bots (should be left empty) -->
+  <div style="display:none;">
+    <label for="website">Website</label>
+    <input type="text" id="website" name="website" />
+  </div>
+
+  <!-- Timestamp to help detect automated/bot submissions -->
+  <input type="hidden" id="ts" name="ts" value="" />
+
   <button type="submit">Request Quote</button>
 </form>
 
 <script>
-document.getElementById('request-quote-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  // Simple client-side POST to the thank-you route using fetch
-  const data = new URLSearchParams(new FormData(this));
-  fetch(this.action, { method: 'POST', body: data })
-    .then(r => {
-      if (r.redirected) {
-        window.location = r.url;
-        return;
+// Minimal analytics and simple anti-spam using a honeypot and a time threshold
+(function(){
+  var form = document.getElementById('request-quote-form');
+  var tsField = document.getElementById('ts');
+  tsField.value = Date.now();
+
+  function pushEvent(name, props){
+    try {
+      if (window.gtag) {
+        gtag('event', name, props || {});
       }
-      // fallback to manually navigate to the thank-you page
+    } catch (e) {}
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, props || {}));
+    } catch (e) {}
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    pushEvent('quote_submit_attempt');
+
+    var formData = new FormData(form);
+
+    // Basic honeypot check
+    if (formData.get('website')){
+      pushEvent('quote_submit_spam', { reason: 'honeypot' });
+      // pretend success to avoid giving bots feedback
       window.location = '/request-quote/received/';
-    })
-    .catch(() => window.location = '/request-quote/received/');
-});
+      return;
+    }
+
+    // Time-based check: require at least 3 seconds between form load and submit
+    var ts = parseInt(formData.get('ts') || '0', 10);
+    if (!ts || (Date.now() - ts) < 3000){
+      pushEvent('quote_submit_spam', { reason: 'timing' });
+      window.location = '/request-quote/received/';
+      return;
+    }
+
+    // Send to serverless function
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    }).then(function(res){
+      if (res.ok) {
+        pushEvent('quote_submit_success');
+        window.location = '/request-quote/received/';
+      } else {
+        pushEvent('quote_submit_failure');
+        window.location = '/request-quote/received/';
+      }
+    }).catch(function(){
+      pushEvent('quote_submit_error');
+      window.location = '/request-quote/received/';
+    });
+  });
+})();
 </script>
