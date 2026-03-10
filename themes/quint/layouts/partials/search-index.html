@@ -14,7 +14,7 @@
     "content": {{ .Content | plainify }}, // Convert HTML to plain text and keep for image extraction
     "url": "{{ .Permalink }}",
     "image": "{{ with .Params.image }}{{ . }}{{ end }}",
-    "description": "{{ with .Params.description }}{{ . }}{{ end }}"
+    "description": "{{ with .Summary }}{{ . }}{{ else }}{{ .Content | plainify | truncate 160 }}{{ end }}"
         },
     {{ end }}
     }
