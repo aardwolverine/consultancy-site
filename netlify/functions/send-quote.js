@@ -36,10 +36,13 @@ exports.handler = async function(event, context) {
     }
   });
 
+  const mailFrom = email && email.indexOf('@') > -1 ? email : (process.env.MAIL_FROM || 'info@acadsys.com.au');
+  const mailTo = process.env.MAIL_TO || 'info@acadsys.com.au';
+
   const mailOptions = {
-    from: process.env.MAIL_FROM || 'info@acadsys.com.au',
-    to: process.env.MAIL_TO || 'info@acadsys.com.au',
-    subject: `Quote request from ${name}`,
+    from: mailFrom,
+    to: mailTo,
+    subject: 'Quote for Consulting Services',
     text: `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`,
     html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`
   };

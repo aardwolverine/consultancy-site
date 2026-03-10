@@ -23,5 +23,9 @@
     {{- end }}
     
     {{ partial "extra_head.html" . }}
+
+    <!-- Expose reCAPTCHA site key to client (set in config or override via environment during build) -->
+    <script>window.RECAPTCHA_SITE_KEY = "{{ .Site.Params.recaptcha_site_key }}";</script>
+
     {{ partial "seo.html" . }}
 </head>
