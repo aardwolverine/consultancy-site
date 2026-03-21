@@ -11,6 +11,8 @@ numImages = 10
 css = ["css/custom.css"]
 # Add your reCAPTCHA site key here (set on deploy to avoid exposing keys in source)
 recaptcha_site_key = ""
+# Google Analytics measurement id (set this to enable gtag events)
+ga_measurement_id = ""
 
 [markup]
   [markup.goldmark.renderer]
