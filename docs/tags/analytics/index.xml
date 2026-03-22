@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Analytics on Academic Systems Consulting</title>
-    <link>http://localhost:1313/tags/analytics/</link>
-    <description>Recent content in Analytics on Academic Systems Consulting</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data Analysis</title>
-      <link>http://localhost:1313/services/data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/data/</guid>
-      <description>Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Analytics on Academic Systems Consulting</title><link>https://acadsys.com.au/tags/analytics/</link><description>Recent content in Analytics on Academic Systems Consulting</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://acadsys.com.au/tags/analytics/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Analysis</title><link>https://acadsys.com.au/services/data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/data/</guid><description>Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting.</description></item></channel></rss>

@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Process on Academic Systems Consulting</title>
-    <link>http://localhost:1313/tags/process/</link>
-    <description>Recent content in Process on Academic Systems Consulting</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/process/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Business Process Analysis</title>
-      <link>http://localhost:1313/services/analysis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/analysis/</guid>
-      <description>Business process analysis &amp;amp; automation for higher education — reduce manual reporting, improve compliance and save staff time.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Process on Academic Systems Consulting</title><link>https://acadsys.com.au/tags/process/</link><description>Recent content in Process on Academic Systems Consulting</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://acadsys.com.au/tags/process/index.xml" rel="self" type="application/rss+xml"/><item><title>Business Process Analysis</title><link>https://acadsys.com.au/services/analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/analysis/</guid><description>Business process analysis &amp;amp; automation for higher education — reduce manual reporting, improve compliance and save staff time.</description></item></channel></rss>

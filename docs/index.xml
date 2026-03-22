@@ -1,67 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Academic Systems Consulting</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Academic Systems Consulting</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Business Process Analysis</title>
-      <link>http://localhost:1313/services/analysis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/analysis/</guid>
-      <description>Business process analysis &amp;amp; automation for higher education — reduce manual reporting, improve compliance and save staff time.</description>
-    </item>
-    <item>
-      <title>Data Analysis</title>
-      <link>http://localhost:1313/services/data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/data/</guid>
-      <description>Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting.</description>
-    </item>
-    <item>
-      <title>Policy &amp; Risk</title>
-      <link>http://localhost:1313/services/policy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/policy/</guid>
-      <description>Policy and risk assessments for higher education — align policy with practice, reduce compliance gaps and operational risk.</description>
-    </item>
-    <item>
-      <title>Project Support &amp; Rescue</title>
-      <link>http://localhost:1313/services/project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/project/</guid>
-      <description>Project rescue for higher education — diagnose root causes, streamline processes and restore momentum.</description>
-    </item>
-    <item>
-      <title>Request a Quote</title>
-      <link>http://localhost:1313/request-quote/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/request-quote/</guid>
-      <description>&lt;form id=&#34;request-quote-form&#34; name=&#34;request-quote&#34; method=&#34;POST&#34; action=&#34;http://localhost:1313/request-quote/&#34; data-netlify=&#34;true&#34; data-netlify-honeypot=&#34;website&#34;&gt;&#xA;  &lt;input type=&#34;hidden&#34; name=&#34;form-name&#34; value=&#34;request-quote&#34; /&gt;&#xA;  &lt;label for=&#34;name&#34;&gt;Your name&lt;/label&gt;&#xA;  &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required /&gt;&#xA;&lt;p&gt;&lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt;&#xA;&lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;label for=&#34;organisation&#34;&gt;Organisation&lt;/label&gt;&#xA;&lt;input type=&#34;text&#34; id=&#34;organisation&#34; name=&#34;organisation&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;label for=&#34;message&#34;&gt;Project details (brief)&lt;/label&gt;&lt;/p&gt;&#xA;  &lt;textarea id=&#34;message&#34; name=&#34;message&#34; rows=&#34;6&#34; required&gt;&lt;/textarea&gt;&#xA;  &lt;!-- Honeypot field to trap bots (should be left empty) --&gt;&#xA;  &lt;div style=&#34;display:none;&#34;&gt;&#xA;    &lt;label for=&#34;website&#34;&gt;Website&lt;/label&gt;&#xA;    &lt;input type=&#34;text&#34; id=&#34;website&#34; name=&#34;website&#34; /&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;!-- Timestamp to help detect automated/bot submissions --&gt;&#xA;  &lt;input type=&#34;hidden&#34; id=&#34;ts&#34; name=&#34;ts&#34; value=&#34;&#34; /&gt;&#xA;  &lt;!-- Invisible reCAPTCHA token --&gt;&#xA;  &lt;input type=&#34;hidden&#34; id=&#34;g-recaptcha-response&#34; name=&#34;g-recaptcha-response&#34; value=&#34;&#34; /&gt;&#xA;&lt;p&gt;&lt;button type=&#34;submit&#34;&gt;Request Quote&lt;/button&gt;&lt;/p&gt;&#xA;&lt;/form&gt;&#xA;&lt;script&gt;&#xA;// Minimal analytics and simple anti-spam using a honeypot and a time threshold&#xA;(function(){&#xA;  var form = document.getElementById(&#39;request-quote-form&#39;);&#xA;  var tsField = document.getElementById(&#39;ts&#39;);&#xA;  tsField.value = Date.now();&#xA;&#xA;  function pushEvent(name, props){&#xA;    try {&#xA;      if (window.gtag) {&#xA;        gtag(&#39;event&#39;, name, props || {});&#xA;      }&#xA;    } catch (e) {}&#xA;    try {&#xA;      window.dataLayer = window.dataLayer || [];&#xA;      window.dataLayer.push(Object.assign({ event: name }, props || {}));&#xA;    } catch (e) {}&#xA;  }&#xA;&#xA;  form.addEventListener(&#39;submit&#39;, function(e){&#xA;    e.preventDefault();&#xA;&#xA;    pushEvent(&#39;quote_submit_attempt&#39;);&#xA;&#xA;    var formData = new FormData(form);&#xA;&#xA;    // Basic honeypot check&#xA;    if (formData.get(&#39;website&#39;)){&#xA;      pushEvent(&#39;quote_submit_spam&#39;, { reason: &#39;honeypot&#39; });&#xA;      // pretend success to avoid giving bots feedback&#xA;      window.location = &#39;/request-quote/received/&#39;;&#xA;      return;&#xA;    }&#xA;&#xA;    // Time-based check: require at least 3 seconds between form load and submit&#xA;    var ts = parseInt(formData.get(&#39;ts&#39;) || &#39;0&#39;, 10);&#xA;    if (!ts || (Date.now() - ts) &lt; 3000){&#xA;      pushEvent(&#39;quote_submit_spam&#39;, { reason: &#39;timing&#39; });&#xA;      window.location = &#39;/request-quote/received/&#39;;&#xA;      return;&#xA;    }&#xA;&#xA;      // Ensure reCAPTCHA token if available&#xA;    (window._recaptcha &amp;&amp; window.RECAPTCHA_SITE_KEY ? window._recaptcha.ensureLoaded(function(){&#xA;      window._recaptcha.getToken(&#39;request_quote&#39;).then(function(token){&#xA;        if (token) formData.set(&#39;g-recaptcha-response&#39;, token);&#xA;        sendRequest(formData);&#xA;      });&#xA;    }) : sendRequest(formData));&#xA;&#xA;    function sendRequest(formData){&#xA;      // Send to serverless function&#xA;      fetch(form.action, {&#xA;        method: &#39;POST&#39;,&#xA;        body: formData&#xA;      }).then(function(res){&#xA;        if (res.ok) {&#xA;          pushEvent(&#39;quote_submit_success&#39;);&#xA;          window.location = &#39;/request-quote/received/&#39;;&#xA;        } else {&#xA;          pushEvent(&#39;quote_submit_failure&#39;);&#xA;          window.location = &#39;/request-quote/received/&#39;;&#xA;        }&#xA;      }).catch(function(){&#xA;        pushEvent(&#39;quote_submit_error&#39;);&#xA;        window.location = &#39;/request-quote/received/&#39;;&#xA;      });&#xA;    }&#xA;    });&#xA;})();&#xA;&lt;/script&gt;</description>
-    </item>
-    <item>
-      <title>Request received</title>
-      <link>http://localhost:1313/request-quote/received/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/request-quote/received/</guid>
-      <description>&lt;h1&gt;Request received&lt;/h1&gt;&#xA;&lt;p&gt;Thank you — we&#39;ve received your request and will contact you shortly to discuss your requirements.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Student Evaluations &amp; Engagement</title>
-      <link>http://localhost:1313/services/students/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/students/</guid>
-      <description>Student evaluations &amp;amp; engagement — design robust survey systems and reporting that inform teaching improvement and accreditation evidence.</description>
-    </item>
-    <item>
-      <title>Team &amp; Individualised Copilot Mentoring</title>
-      <link>http://localhost:1313/services/copilot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/copilot/</guid>
-      <description>Copilot training and mentoring for higher education — practical AI adoption for compliance, reporting and process improvement.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic Systems Consulting</title><link>https://acadsys.com.au/</link><description>Recent content on Academic Systems Consulting</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://acadsys.com.au/index.xml" rel="self" type="application/rss+xml"/><item><title>Business Process Analysis</title><link>https://acadsys.com.au/services/analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/analysis/</guid><description>Business process analysis &amp;amp; automation for higher education — reduce manual reporting, improve compliance and save staff time.</description></item><item><title>Data Analysis</title><link>https://acadsys.com.au/services/data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/data/</guid><description>Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting.</description></item><item><title>Policy &amp; Risk</title><link>https://acadsys.com.au/services/policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/policy/</guid><description>Policy and risk assessments for higher education — align policy with practice, reduce compliance gaps and operational risk.</description></item><item><title>Project Support &amp; Rescue</title><link>https://acadsys.com.au/services/project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/project/</guid><description>Project rescue for higher education — diagnose root causes, streamline processes and restore momentum.</description></item><item><title>Request a Quote</title><link>https://acadsys.com.au/request-quote/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/request-quote/</guid><description>&lt;form id="request-quote-form" name="request-quote" method="POST" action="https://acadsys.com.au/request-quote/" data-netlify="true" data-netlify-honeypot="website">
+ &lt;input type="hidden" name="form-name" value="request-quote" />
+ &lt;label for="name">Your name&lt;/label>
+ &lt;input type="text" id="name" name="name" required />
+&lt;p>&lt;label for="email">Email&lt;/label>
+&lt;input type="email" id="email" name="email" required />&lt;/p>
+&lt;p>&lt;label for="organisation">Organisation&lt;/label>
+&lt;input type="text" id="organisation" name="organisation" />&lt;/p>
+&lt;p>&lt;label for="message">Project details (brief)&lt;/label>&lt;/p>
+ &lt;textarea id="message" name="message" rows="6" required>&lt;/textarea>
+ &lt;!-- Honeypot field to trap bots (should be left empty) -->
+ &lt;div style="display:none;">
+ &lt;label for="website">Website&lt;/label>
+ &lt;input type="text" id="website" name="website" />
+ &lt;/div>
+ &lt;!-- Timestamp to help detect automated/bot submissions -->
+ &lt;input type="hidden" id="ts" name="ts" value="" />
+ &lt;!-- Invisible reCAPTCHA token -->
+ &lt;input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="" />
+&lt;p>&lt;button type="submit">Request Quote&lt;/button>&lt;/p>
+&lt;/form>
+&lt;script>
+// Minimal analytics and simple anti-spam using a honeypot and a time threshold
+(function(){
+ var form = document.getElementById('request-quote-form');
+ var tsField = document.getElementById('ts');
+ tsField.value = Date.now();
+
+ function pushEvent(name, props){
+ try {
+ if (window.gtag) {
+ gtag('event', name, props || {});
+ }
+ } catch (e) {}
+ try {
+ window.dataLayer = window.dataLayer || [];
+ window.dataLayer.push(Object.assign({ event: name }, props || {}));
+ } catch (e) {}
+ }
+
+ form.addEventListener('submit', function(e){
+ e.preventDefault();
+
+ pushEvent('quote_submit_attempt');
+
+ var formData = new FormData(form);
+
+ // Basic honeypot check
+ if (formData.get('website')){
+ pushEvent('quote_submit_spam', { reason: 'honeypot' });
+ // pretend success to avoid giving bots feedback
+ window.location = '/request-quote/received/';
+ return;
+ }
+
+ // Time-based check: require at least 3 seconds between form load and submit
+ var ts = parseInt(formData.get('ts') || '0', 10);
+ if (!ts || (Date.now() - ts) &lt; 3000){
+ pushEvent('quote_submit_spam', { reason: 'timing' });
+ window.location = '/request-quote/received/';
+ return;
+ }
+
+ // Ensure reCAPTCHA token if available
+ (window._recaptcha &amp;&amp; window.RECAPTCHA_SITE_KEY ? window._recaptcha.ensureLoaded(function(){
+ window._recaptcha.getToken('request_quote').then(function(token){
+ if (token) formData.set('g-recaptcha-response', token);
+ sendRequest(formData);
+ });
+ }) : sendRequest(formData));
+
+ function sendRequest(formData){
+ // Send to serverless function
+ fetch(form.action, {
+ method: 'POST',
+ body: formData
+ }).then(function(res){
+ if (res.ok) {
+ pushEvent('quote_submit_success');
+ window.location = '/request-quote/received/';
+ } else {
+ pushEvent('quote_submit_failure');
+ window.location = '/request-quote/received/';
+ }
+ }).catch(function(){
+ pushEvent('quote_submit_error');
+ window.location = '/request-quote/received/';
+ });
+ }
+ });
+})();
+&lt;/script></description></item><item><title>Request received</title><link>https://acadsys.com.au/request-quote/received/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/request-quote/received/</guid><description>&lt;h1>Request received&lt;/h1>
+&lt;p>Thank you — we've received your request and will contact you shortly to discuss your requirements.&lt;/p></description></item><item><title>Student Evaluations &amp; Engagement</title><link>https://acadsys.com.au/services/students/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/students/</guid><description>Student evaluations &amp;amp; engagement — design robust survey systems and reporting that inform teaching improvement and accreditation evidence.</description></item><item><title>Team &amp; Individualised Copilot Mentoring</title><link>https://acadsys.com.au/services/copilot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://acadsys.com.au/services/copilot/</guid><description>Copilot training and mentoring for higher education — practical AI adoption for compliance, reporting and process improvement.</description></item></channel></rss>
