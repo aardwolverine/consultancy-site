@@ -1,11 +1,9 @@
-{{ if .IsHome }}
-  {{ $posts := where (where .Site.RegularPages "Section" "Services") ".Params.unlisted" "ne" true }}  <!-- Assuming 'content/blog' is the section for posts -->
-  {{ $paginator := .Paginate ($posts) }}
-{{ else }}
-  {{ $currentSection := .Section }}
-  {{ $posts := where (where .Site.Pages "Section" $currentSection) ".Params.unlisted" "ne" true }}
-  {{ $paginator := .Paginate ($posts) }}
-{{ end }}
+{{- $posts := cond .IsHome
+    (where (where .Site.RegularPages "Section" "Services") ".Params.unlisted" "ne" true)
+    (where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true)
+-}}
+{{- $paginator := .Paginate $posts -}}
+
 <div class="cards" id="results">
     {{ range $paginator.Pages }}
         <div class="card h-entry">
