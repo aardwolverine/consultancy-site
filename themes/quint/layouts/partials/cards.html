@@ -1,11 +1,10 @@
-{{/* Get filtered posts FIRST, then paginate */}}
-{{- if .IsHome }}
-  {{- $posts := where (where .Site.RegularPages "Section" "blog") ".Params.unlisted" "ne" true }}
-  {{- $paginator := .Paginate $posts }}
-{{- else }}
-  {{- $posts := where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true }}
-  {{- $paginator := .Paginate $posts }}
-{{- end }}
+{{- if .IsHome -}}
+  {{- $posts := where (where .Site.RegularPages "Section" "blog") ".Params.unlisted" "ne" true -}}
+  {{- $paginator := .Paginate $posts -}}
+{{- else -}}
+  {{- $posts := where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true -}}
+  {{- $paginator := .Paginate $posts -}}
+{{- end -}}
 
 <div class="cards" id="results">
     {{ range $paginator.Pages }}
