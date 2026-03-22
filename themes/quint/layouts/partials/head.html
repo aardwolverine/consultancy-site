@@ -27,8 +27,8 @@
     <!-- Google Tag Manager head (container ID from site params) -->
     {{ partial "gtm_head.html" . }}
 
-    <!-- Expose reCAPTCHA site key to client (set in config or override via environment during build) -->
-    <script>window.RECAPTCHA_SITE_KEY = "{{ .Site.Params.recaptcha_site_key }}";</script>
+    <!-- Expose reCAPTCHA site key to client: prefer site param, otherwise use RECAPTCHA_SITE_KEY env injected at build -->
+    <script>window.RECAPTCHA_SITE_KEY = "{{ with .Site.Params.recaptcha_site_key }}{{ . }}{{ else }}{{ getenv "RECAPTCHA_SITE_KEY" }}{{ end }}";</script>
 
     <!-- Expose GA Measurement ID to client (used by gtag if present) -->
     <script>window.GA_MEASUREMENT_ID = "{{ .Site.Params.ga_measurement_id }}";</script>
