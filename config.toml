@@ -10,7 +10,7 @@ theme = "quint"
 numImages = 10
 css = ["css/custom.css"]
 # Add your reCAPTCHA site key here (set on deploy to avoid exposing keys in source)
-recaptcha_site_key = ""
+recaptcha_site_key = "6Ldr8JIsAAAAAFMyzWwB5CSqpgoI8EFgU6rtru8H"
 # Google Analytics measurement id (set this to enable gtag events)
 ga_measurement_id = "G-R57L0QB0EF"
 
