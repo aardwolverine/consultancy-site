@@ -1,12 +1,11 @@
 {{ if .IsHome }}
   {{ $posts := where (where .Site.RegularPages "Section" "Services") ".Params.unlisted" "ne" true }}  <!-- Assuming 'content/blog' is the section for posts -->
-  {{ .Scratch.Set "posts" $posts }}
+  {{ $paginator := .Paginate ($posts) }}
 {{ else }}
   {{ $currentSection := .Section }}
   {{ $posts := where (where .Site.Pages "Section" $currentSection) ".Params.unlisted" "ne" true }}
-  {{ .Scratch.Set "posts" $posts }}
+  {{ $paginator := .Paginate ($posts) }}
 {{ end }}
-{{ $paginator := .Paginate (.Scratch.Get "posts") }}
 <div class="cards" id="results">
     {{ range $paginator.Pages }}
         <div class="card h-entry">
