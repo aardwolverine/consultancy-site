@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Copilot on Academic Systems Consulting</title>
+    <link>http://localhost:1313/tags/copilot/</link>
+    <description>Recent content in Copilot on Academic Systems Consulting</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Team &amp; Individualised Copilot Mentoring</title>
+      <link>http://localhost:1313/services/copilot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/copilot/</guid>
+      <description>Copilot training and mentoring for higher education — practical AI adoption for compliance, reporting and process improvement.</description>
+    </item>
+  </channel>
+</rss>

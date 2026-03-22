@@ -252,21 +252,7 @@ header .logo img {
 }
 
 .hero div {
-    padding: 0 clamp(1rem, 4vw, 3rem);
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    /* Responsive padding ensures the hero text appears wider than the main content
-       on larger screens while remaining comfortable on small devices. */
-}
-
-@media (min-width: 1200px) {
-    /* On very wide screens, push the hero text further out relative to the centered
-       800px container so it visually sits wider than list/cards without hard units */
-    .hero div {
-        padding-left: calc((100vw - 800px) / 2 + 1.5rem);
-        padding-right: calc((100vw - 800px) / 2 + 1.5rem);
-    }
+    padding: 0 1rem;
 }
 
 .hero h1,

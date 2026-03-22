@@ -7,15 +7,13 @@ title = "Academic Systems Consulting"
 theme = "quint"
 
 [params]
-numImages = 10
-css = ["css/custom.css"]
-# Add your reCAPTCHA site key here (set on deploy to avoid exposing keys in source)
-recaptcha_site_key = "6Ldr8JIsAAAAAFMyzWwB5CSqpgoI8EFgU6rtru8H"
-# Google Analytics measurement id (set this to enable gtag events)
-ga_measurement_id = "G-R57L0QB0EF"
-
-# Author/site owner parameters (use .Site.Params to avoid deprecated .Site.Author)
-[params]
+  numImages = 10
+  css = ["css/custom.css"]
+# Google reCAPTCHA site key
+  recaptcha_site_key = "6Ldr8JIsAAAAAFMyzWwB5CSqpgoI8EFgU6rtru8H"
+# Google Analytics measurement id
+  ga_measurement_id = "G-R57L0QB0EF"
+# Author/site owner parameters
   author_name = "Academic Systems Consulting"
   author_image = "/images/logo/logo-light.png"
   author_email = "info@acadsys.com.au"

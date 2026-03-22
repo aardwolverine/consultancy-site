@@ -17,9 +17,16 @@
                 </time>
 */}}
                 <span rel="author" class="p-author h-card">
-                    {{/* Use site params for author info (avoid deprecated .Site.Author) */}}
-                    <img class="u-photo hidden" src="{{ with .Site.Params.author_image }}{{ . }}{{ else if .Site.Params.author.image }}{{ .Site.Params.author.image }}{{ else }}" />
-                    <span class="p-name hidden" rel="me">{{ with .Params.author }}{{ . }}{{ else if .Site.Params.author_name }}{{ .Site.Params.author_name }}{{ else }}{{ .Site.Params.author.name }}{{ end }}</span>
+                 {{ with .Site.Params.author_image }}
+                    <img class="u-photo hidden" src="{{ . }}">
+                 {{ end }}
+                    <span class="p-name hidden" rel="me">
+                 {{ with .Params.author }}
+                    {{ . }}
+                 {{ else }}
+                   {{ .Site.Params.author_name }}
+                 {{ end }} 
+                    </span>
                 </span>
             </div>
             <div class="e-content">

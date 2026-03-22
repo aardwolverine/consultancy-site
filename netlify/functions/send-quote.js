@@ -1,4 +1,4 @@
-const sgMail = require('@sendgrid/mail');
+const fetch = require('node-fetch');
 
 exports.handler = async function(event, context) {
   if (event.httpMethod !== 'POST') {
@@ -31,7 +31,6 @@ exports.handler = async function(event, context) {
   // If a reCAPTCHA token is present, verify it with Google before sending
   const recaptchaToken = params.get('g-recaptcha-response') || '';
   if (recaptchaToken && process.env.RECAPTCHA_SECRET) {
-    const fetch = require('node-fetch');
     try {
       const resp = await fetch('https://www.google.com/recaptcha/api/siteverify', {
         method: 'POST',
@@ -50,27 +49,65 @@ exports.handler = async function(event, context) {
     }
   }
 
-  if (!process.env.SENDGRID_API_KEY) {
-    console.error('SENDGRID_API_KEY not set');
+  // Prefer Brevo (Brevo API key) if provided; otherwise fall back to SendGrid if present
+  const brevoKey = process.env.BREVO_API_KEY;
+  const sendgridKey = process.env.SENDGRID_API_KEY;
+
+  if (!brevoKey && !sendgridKey) {
+    console.error('No email API key configured. Set BREVO_API_KEY or SENDGRID_API_KEY');
     return { statusCode: 500, body: 'Email service not configured' };
   }
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-  const msg = {
-    to: mailTo,
-    from: mailFrom,
-    replyTo: userEmailValid ? email : undefined,
-    subject: 'Quote for Consulting Services',
-    text: `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`,
-    html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`
-  };
+  const subject = 'Quote for Consulting Services';
+  const textContent = `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`;
+  const htmlContent = `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`;
 
   try {
-    await sgMail.send(msg);
-    return { statusCode: 200, body: 'OK' };
+    if (brevoKey) {
+      // Send via Brevo (SMTP API)
+      const payload = {
+        sender: { email: mailFrom },
+        to: [{ email: mailTo }],
+        subject: subject,
+        htmlContent: htmlContent,
+        textContent: textContent
+      };
+      if (userEmailValid) payload.replyTo = { email: email };
+
+      const resp = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'api-key': brevoKey
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!resp.ok) {
+        const body = await resp.text();
+        console.error('Brevo send failed', resp.status, body);
+        return { statusCode: 500, body: 'Error' };
+      }
+
+      return { statusCode: 200, body: 'OK' };
+    } else {
+      // SendGrid fallback (if configured)
+      const sgMail = require('@sendgrid/mail');
+      sgMail.setApiKey(sendgridKey);
+      const msg = {
+        to: mailTo,
+        from: mailFrom,
+        replyTo: userEmailValid ? email : undefined,
+        subject: subject,
+        text: textContent,
+        html: htmlContent
+      };
+      await sgMail.send(msg);
+      return { statusCode: 200, body: 'OK' };
+    }
   } catch (err) {
-    console.error('SendGrid send error', err);
+    console.error('Email send error', err);
     return { statusCode: 500, body: 'Error' };
   }
 };

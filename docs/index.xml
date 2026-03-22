@@ -2,52 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Academic Systems Consulting</title>
-    <link>https://acadsys.com.au/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Academic Systems Consulting</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://acadsys.com.au/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Business Process Analysis</title>
-      <link>https://acadsys.com.au/services/analysis/</link>
+      <link>http://localhost:1313/services/analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/analysis/</guid>
-      <description>&lt;h2 id=&#34;business-process-analysis&#34;&gt;Business Process Analysis&lt;/h2&gt;&#xA;&lt;p&gt;Business Process Analysis (BPA) involves analysing the current state of a business process to identify risks and improvements where operational efficiencies can be obtained. Our comprehensive understanding of the higher education sector allows us to thoroughly understand the intersection between professional and academic staff, including the workflows, bottlenecks, and governance structures, the complexity of multiple IT systems, including Learning Management Systems, Student Management Systems, and Academic Information Systems.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/analysis/</guid>
+      <description>Business process analysis &amp;amp; automation for higher education — reduce manual reporting, improve compliance and save staff time.</description>
     </item>
     <item>
       <title>Data Analysis</title>
-      <link>https://acadsys.com.au/services/data/</link>
+      <link>http://localhost:1313/services/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/data/</guid>
-      <description>&lt;h2 id=&#34;data-analysis&#34;&gt;Data Analysis&lt;/h2&gt;&#xA;&lt;p&gt;Data is central to effective decision-making in higher education, yet turning raw information into meaningful insights is often challenging. Our Data Analysis service enables institutions to not only understand the data they hold, but also to translate it into clear, usable outputs. We support leaders, managers, and academics by ensuring that data is accurate, purposeful, and presented in ways that align with institutional priorities.&lt;/p&gt;&#xA;&lt;p&gt;Rather than drowning in lengthy or complex reports, we help you focus on essentials: what the data reveals, why it matters, and how it can be applied. With improved clarity and strategic alignment, data becomes a driver of continuous improvement, stronger governance, and informed planning across teaching, learning, and compliance activities.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/data/</guid>
+      <description>Data analysis and dashboards for higher education — turn raw data into clear, compliance-ready insights and operational reporting.</description>
     </item>
     <item>
       <title>Policy &amp; Risk</title>
-      <link>https://acadsys.com.au/services/policy/</link>
+      <link>http://localhost:1313/services/policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/policy/</guid>
-      <description>&lt;h2 id=&#34;policy--risk&#34;&gt;Policy &amp;amp; Risk&lt;/h2&gt;&#xA;&lt;p&gt;Effective governance in higher education relies on clear, compliant, and operationally sound policies. Yet as regulations evolve under TEQSA, ASQA, and ESOS standards, institutions often face gaps between policy intent and actual practice. Our Policy &amp;amp; Risk service bridges this gap, ensuring policies are not only compliant on paper but also practical and enforceable in daily operations.&lt;/p&gt;&#xA;&lt;p&gt;Through detailed business process analysis, we assess institutional policies and regulatory procedures to identify compliance threats, operational risks, and process inefficiencies. This approach creates a strong link between governance, compliance, and the lived realities of staff and students, reducing the risk of exposure during audits or external reviews.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/policy/</guid>
+      <description>Policy and risk assessments for higher education — align policy with practice, reduce compliance gaps and operational risk.</description>
     </item>
     <item>
       <title>Project Support &amp; Rescue</title>
-      <link>https://acadsys.com.au/services/project/</link>
+      <link>http://localhost:1313/services/project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/project/</guid>
-      <description>&lt;h2 id=&#34;project-rescue&#34;&gt;Project Rescue&lt;/h2&gt;&#xA;&lt;p&gt;Projects in the higher education sector often face unique challenges—complex compliance requirements, competing priorities, and diverse stakeholders. When projects stall or underperform, the impact is felt across teams, timelines, and outcomes. Our Project Rescue service identifies what has gone wrong, untangles the complexity, and charts a clear path back to progress.&lt;/p&gt;&#xA;&lt;p&gt;We focus on uncovering the underlying issues holding your initiative back, whether they lie in process inefficiencies, unclear decision-making structures, or resource misalignment. By mapping both the operational and compliance dimensions of a project, we create a roadmap that restores energy, focus, and accountability.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/project/</guid>
+      <description>Project rescue for higher education — diagnose root causes, streamline processes and restore momentum.</description>
+    </item>
+    <item>
+      <title>Request a Quote</title>
+      <link>http://localhost:1313/request-quote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/request-quote/</guid>
+      <description>&lt;form id=&#34;request-quote-form&#34; name=&#34;request-quote&#34; method=&#34;POST&#34; action=&#34;http://localhost:1313/request-quote/&#34; data-netlify=&#34;true&#34; data-netlify-honeypot=&#34;website&#34;&gt;&#xA;  &lt;input type=&#34;hidden&#34; name=&#34;form-name&#34; value=&#34;request-quote&#34; /&gt;&#xA;  &lt;label for=&#34;name&#34;&gt;Your name&lt;/label&gt;&#xA;  &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; required /&gt;&#xA;&lt;p&gt;&lt;label for=&#34;email&#34;&gt;Email&lt;/label&gt;&#xA;&lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; required /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;label for=&#34;organisation&#34;&gt;Organisation&lt;/label&gt;&#xA;&lt;input type=&#34;text&#34; id=&#34;organisation&#34; name=&#34;organisation&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;label for=&#34;message&#34;&gt;Project details (brief)&lt;/label&gt;&lt;/p&gt;&#xA;  &lt;textarea id=&#34;message&#34; name=&#34;message&#34; rows=&#34;6&#34; required&gt;&lt;/textarea&gt;&#xA;  &lt;!-- Honeypot field to trap bots (should be left empty) --&gt;&#xA;  &lt;div style=&#34;display:none;&#34;&gt;&#xA;    &lt;label for=&#34;website&#34;&gt;Website&lt;/label&gt;&#xA;    &lt;input type=&#34;text&#34; id=&#34;website&#34; name=&#34;website&#34; /&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;!-- Timestamp to help detect automated/bot submissions --&gt;&#xA;  &lt;input type=&#34;hidden&#34; id=&#34;ts&#34; name=&#34;ts&#34; value=&#34;&#34; /&gt;&#xA;  &lt;!-- Invisible reCAPTCHA token --&gt;&#xA;  &lt;input type=&#34;hidden&#34; id=&#34;g-recaptcha-response&#34; name=&#34;g-recaptcha-response&#34; value=&#34;&#34; /&gt;&#xA;&lt;p&gt;&lt;button type=&#34;submit&#34;&gt;Request Quote&lt;/button&gt;&lt;/p&gt;&#xA;&lt;/form&gt;&#xA;&lt;script&gt;&#xA;// Minimal analytics and simple anti-spam using a honeypot and a time threshold&#xA;(function(){&#xA;  var form = document.getElementById(&#39;request-quote-form&#39;);&#xA;  var tsField = document.getElementById(&#39;ts&#39;);&#xA;  tsField.value = Date.now();&#xA;&#xA;  function pushEvent(name, props){&#xA;    try {&#xA;      if (window.gtag) {&#xA;        gtag(&#39;event&#39;, name, props || {});&#xA;      }&#xA;    } catch (e) {}&#xA;    try {&#xA;      window.dataLayer = window.dataLayer || [];&#xA;      window.dataLayer.push(Object.assign({ event: name }, props || {}));&#xA;    } catch (e) {}&#xA;  }&#xA;&#xA;  form.addEventListener(&#39;submit&#39;, function(e){&#xA;    e.preventDefault();&#xA;&#xA;    pushEvent(&#39;quote_submit_attempt&#39;);&#xA;&#xA;    var formData = new FormData(form);&#xA;&#xA;    // Basic honeypot check&#xA;    if (formData.get(&#39;website&#39;)){&#xA;      pushEvent(&#39;quote_submit_spam&#39;, { reason: &#39;honeypot&#39; });&#xA;      // pretend success to avoid giving bots feedback&#xA;      window.location = &#39;/request-quote/received/&#39;;&#xA;      return;&#xA;    }&#xA;&#xA;    // Time-based check: require at least 3 seconds between form load and submit&#xA;    var ts = parseInt(formData.get(&#39;ts&#39;) || &#39;0&#39;, 10);&#xA;    if (!ts || (Date.now() - ts) &lt; 3000){&#xA;      pushEvent(&#39;quote_submit_spam&#39;, { reason: &#39;timing&#39; });&#xA;      window.location = &#39;/request-quote/received/&#39;;&#xA;      return;&#xA;    }&#xA;&#xA;      // Ensure reCAPTCHA token if available&#xA;    (window._recaptcha &amp;&amp; window.RECAPTCHA_SITE_KEY ? window._recaptcha.ensureLoaded(function(){&#xA;      window._recaptcha.getToken(&#39;request_quote&#39;).then(function(token){&#xA;        if (token) formData.set(&#39;g-recaptcha-response&#39;, token);&#xA;        sendRequest(formData);&#xA;      });&#xA;    }) : sendRequest(formData));&#xA;&#xA;    function sendRequest(formData){&#xA;      // Send to serverless function&#xA;      fetch(form.action, {&#xA;        method: &#39;POST&#39;,&#xA;        body: formData&#xA;      }).then(function(res){&#xA;        if (res.ok) {&#xA;          pushEvent(&#39;quote_submit_success&#39;);&#xA;          window.location = &#39;/request-quote/received/&#39;;&#xA;        } else {&#xA;          pushEvent(&#39;quote_submit_failure&#39;);&#xA;          window.location = &#39;/request-quote/received/&#39;;&#xA;        }&#xA;      }).catch(function(){&#xA;        pushEvent(&#39;quote_submit_error&#39;);&#xA;        window.location = &#39;/request-quote/received/&#39;;&#xA;      });&#xA;    }&#xA;    });&#xA;})();&#xA;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Request received</title>
+      <link>http://localhost:1313/request-quote/received/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/request-quote/received/</guid>
+      <description>&lt;h1&gt;Request received&lt;/h1&gt;&#xA;&lt;p&gt;Thank you — we&#39;ve received your request and will contact you shortly to discuss your requirements.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Student Evaluations &amp; Engagement</title>
-      <link>https://acadsys.com.au/services/students/</link>
+      <link>http://localhost:1313/services/students/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/students/</guid>
-      <description>&lt;h2 id=&#34;student-evaluations--surveys&#34;&gt;Student Evaluations &amp;amp; Surveys&lt;/h2&gt;&#xA;&lt;p&gt;Student feedback plays a vital role in shaping, reviewing, and improving the quality of higher education. Evaluations and surveys not only capture the student learning experience but also inform evidence-based decision-making, accreditation requirements, and institutional reporting. Yet as response rates decline and workloads increase, institutions face growing challenges in ensuring that feedback remains reliable, timely, and meaningful.&lt;/p&gt;&#xA;&lt;p&gt;Our Student Evaluations &amp;amp; Surveys consultative services help institutions design and implement systems that capture student voice effectively, interpret results with greater accuracy, and deliver insights to staff and leadership when they are most useful.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/students/</guid>
+      <description>Student evaluations &amp;amp; engagement — design robust survey systems and reporting that inform teaching improvement and accreditation evidence.</description>
     </item>
     <item>
       <title>Team &amp; Individualised Copilot Mentoring</title>
-      <link>https://acadsys.com.au/services/copilot/</link>
+      <link>http://localhost:1313/services/copilot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://acadsys.com.au/services/copilot/</guid>
-      <description>&lt;h2 id=&#34;copilot-for-process-improvement-training&#34;&gt;Copilot for Process Improvement Training&lt;/h2&gt;&#xA;&lt;p&gt;Our Copilot for Process Improvement Training empowers professionals in higher education to effectively integrate AI tools into their daily workflows. By focusing on real-world challenges such as policy interpretation, compliance reporting, and data-driven decision making, we provide training that is practical, sector-specific, and outcomes-oriented.&lt;/p&gt;&#xA;&lt;p&gt;This training goes beyond learning how to prompt Copilot—it develops advanced skills in:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Using Copilot to analyse compliance risks in TEQSA, ASQA, and ESOS-related processes&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/copilot/</guid>
+      <description>Copilot training and mentoring for higher education — practical AI adoption for compliance, reporting and process improvement.</description>
     </item>
   </channel>
 </rss>

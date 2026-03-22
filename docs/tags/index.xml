@@ -2,10 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Academic Systems Consulting</title>
-    <link>https://acadsys.com.au/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Academic Systems Consulting</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://acadsys.com.au/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analytics</title>
+      <link>http://localhost:1313/tags/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compliance</title>
+      <link>http://localhost:1313/tags/compliance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/compliance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>http://localhost:1313/tags/copilot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dashboards</title>
+      <link>http://localhost:1313/tags/dashboards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dashboards/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/tags/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engagement</title>
+      <link>http://localhost:1313/tags/engagement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/engagement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Higher-Education</title>
+      <link>http://localhost:1313/tags/higher-education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/higher-education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Policy</title>
+      <link>http://localhost:1313/tags/policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Process</title>
+      <link>http://localhost:1313/tags/process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/process/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>http://localhost:1313/tags/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rescue</title>
+      <link>http://localhost:1313/tags/rescue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rescue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Risk</title>
+      <link>http://localhost:1313/tags/risk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/risk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Students</title>
+      <link>http://localhost:1313/tags/students/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/students/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Surveys</title>
+      <link>http://localhost:1313/tags/surveys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/surveys/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Training</title>
+      <link>http://localhost:1313/tags/training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/training/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
