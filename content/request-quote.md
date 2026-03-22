@@ -5,7 +5,8 @@ description = "Request a personalised quote from Academic Systems Consulting. Te
 keywords = ["request quote", "consulting quote", "higher education consulting"]
 +++
 
-<form id="request-quote-form" method="POST" action="/.netlify/functions/send-quote">
+<form id="request-quote-form" name="request-quote" method="POST" action="/request-quote/" data-netlify="true" data-netlify-honeypot="website">
+  <input type="hidden" name="form-name" value="request-quote" />
   <label for="name">Your name</label>
   <input type="text" id="name" name="name" required />
 
@@ -88,18 +89,19 @@ keywords = ["request quote", "consulting quote", "higher education consulting"]
       fetch(form.action, {
         method: 'POST',
         body: formData
+      }).then(function(res){
         if (res.ok) {
-        pushEvent('quote_submit_success');
+          pushEvent('quote_submit_success');
+          window.location = '/request-quote/received/';
+        } else {
+          pushEvent('quote_submit_failure');
+          window.location = '/request-quote/received/';
+        }
+      }).catch(function(){
+        pushEvent('quote_submit_error');
         window.location = '/request-quote/received/';
-      } else {
-        pushEvent('quote_submit_failure');
-        window.location = '/request-quote/received/';
-      }
-    }).catch(function(){
-      pushEvent('quote_submit_error');
-      window.location = '/request-quote/received/';
+      });
+    }
     });
-  }
-  });
 })();
 </script>
