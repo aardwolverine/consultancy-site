@@ -2,6 +2,7 @@
 title = "Request a Quote"
 draft = false
 unlisted = true
+image = "images/request-quote.jpg"
 description = "Request a personalised quote from Academic Systems Consulting. Tell us about your project and we'll get back to you."
 keywords = ["request quote", "consulting quote", "higher education consulting"]
 +++
