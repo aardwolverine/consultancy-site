@@ -14,6 +14,11 @@ recaptcha_site_key = "6Ldr8JIsAAAAAFMyzWwB5CSqpgoI8EFgU6rtru8H"
 # Google Analytics measurement id (set this to enable gtag events)
 ga_measurement_id = "G-R57L0QB0EF"
 
+[author]
+  name = "Academic Systems Consulting"
+  image = "/images/logo/logo-light.png"
+  email = "info@acadsys.com.au"
+
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
