@@ -1,8 +1,11 @@
-{{- $posts := cond .IsHome
-    (where (where .Site.RegularPages "Section" "Services") ".Params.unlisted" "ne" true)
-    (where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true)
--}}
-{{- $paginator := .Paginate $posts -}}
+{{/* Get filtered posts FIRST, then paginate */}}
+{{- if .IsHome }}
+  {{- $posts := where (where .Site.RegularPages "Section" "blog") ".Params.unlisted" "ne" true }}
+  {{- $paginator := .Paginate $posts }}
+{{- else }}
+  {{- $posts := where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true }}
+  {{- $paginator := .Paginate $posts }}
+{{- end }}
 
 <div class="cards" id="results">
     {{ range $paginator.Pages }}
@@ -15,35 +18,24 @@
                 {{ end }}
                 <div class="text">
                     <h2 class="p-name">{{ .Title }}</h2>
-                    <p class="small">
-                       {{ if  .Summary }}
-                           {{ .Summary }}
-                       {{ else }}
-                           {{ .Content | plainify | truncate 160 }}
-                       {{ end }}
+                    <p class="small e-content">
+                        {{ if .Summary }}{{ .Summary }}{{ else }}{{ .Content | plainify | truncate 160 }}{{ end }}
                     </p>
                 </div>
             </a>
         </div>
     {{ end }}
 </div>
+
 <!-- Pagination links -->
 {{ if gt $paginator.TotalPages 1 }}
     <div class="pagination">
-        {{ if $paginator.HasPrev }}
-            <a href="{{ $paginator.Prev.URL }}">before</a>
-        {{ else }}
-            <p></p>
-        {{ end }}
+        {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">before</a>{{ else }}<p></p>{{ end }}
         <div class="pages">
             {{ range $paginator.Pagers }}
                 <a href="{{ .URL }}"{{ if eq . $paginator }} class="active"{{ end }}>{{ .PageNumber }}</a>
             {{ end }}
         </div>
-        {{ if $paginator.HasNext }}
-            <a href="{{ $paginator.Next.URL }}">more</a>
-        {{ else }}
-            <p></p>
-        {{ end }}
+        {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">more</a>{{ else }}<p></p>{{ end }}
     </div>
 {{ end }}
