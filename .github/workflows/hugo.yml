@@ -34,12 +34,12 @@ jobs:
           extended: true
 
       - name: Build with Hugo
-        run: hugo --minify
+        run: hugo --minify -s consultancy-site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ./consultancy-site/docs
 
   deploy:
     needs: build
