@@ -7,6 +7,6 @@
     "build": "echo \"No build step required\""
   },
   "dependencies": {
-    "nodemailer": "^6.9.4"
+    "@sendgrid/mail": "^8.11.0"
   }
 }

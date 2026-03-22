@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const sgMail = require('@sendgrid/mail');
 
 exports.handler = async function(event, context) {
   if (event.httpMethod !== 'POST') {
@@ -24,28 +24,9 @@ exports.handler = async function(event, context) {
     return { statusCode: 200, body: 'OK' };
   }
 
-  // Configure transporter using environment variables (recommended)
-  // Set MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASS, MAIL_FROM, MAIL_TO in Netlify environment
-  const transporter = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: Number(process.env.MAIL_PORT || 587),
-    secure: process.env.MAIL_SECURE === 'true',
-    auth: {
-      user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASS,
-    }
-  });
-
-  const mailFrom = email && email.indexOf('@') > -1 ? email : (process.env.MAIL_FROM || 'info@acadsys.com.au');
+  const mailFrom = process.env.MAIL_FROM || 'info@acadsys.com.au';
   const mailTo = process.env.MAIL_TO || 'info@acadsys.com.au';
-
-  const mailOptions = {
-    from: mailFrom,
-    to: mailTo,
-    subject: 'Quote for Consulting Services',
-    text: `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`,
-    html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`
-  };
+  const userEmailValid = email && email.indexOf('@') > -1;
 
   // If a reCAPTCHA token is present, verify it with Google before sending
   const recaptchaToken = params.get('g-recaptcha-response') || '';
@@ -69,17 +50,27 @@ exports.handler = async function(event, context) {
     }
   }
 
+  if (!process.env.SENDGRID_API_KEY) {
+    console.error('SENDGRID_API_KEY not set');
+    return { statusCode: 500, body: 'Email service not configured' };
+  }
+
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+  const msg = {
+    to: mailTo,
+    from: mailFrom,
+    replyTo: userEmailValid ? email : undefined,
+    subject: 'Quote for Consulting Services',
+    text: `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\n\nMessage:\n${message}`,
+    html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Organisation:</strong> ${organisation}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g,'<br/>')}</p>`
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
-    return {
-      statusCode: 200,
-      body: 'OK'
-    };
+    await sgMail.send(msg);
+    return { statusCode: 200, body: 'OK' };
   } catch (err) {
-    console.error('Mail send error', err);
-    return {
-      statusCode: 500,
-      body: 'Error'
-    };
+    console.error('SendGrid send error', err);
+    return { statusCode: 500, body: 'Error' };
   }
 };
