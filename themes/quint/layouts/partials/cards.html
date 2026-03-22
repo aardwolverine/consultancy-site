@@ -1,10 +1,8 @@
-{{- if .IsHome -}}
-  {{- $posts := where (where .Site.RegularPages "Section" "blog") ".Params.unlisted" "ne" true -}}
-  {{- $paginator := .Paginate $posts -}}
-{{- else -}}
-  {{- $posts := where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true -}}
-  {{- $paginator := .Paginate $posts -}}
-{{- end -}}
+{{- $posts := cond .IsHome 
+    (where (where .Site.RegularPages "Section" "Services") ".Params.unlisted" "ne" true)
+    (where (where .Site.RegularPages "Section" .Section) ".Params.unlisted" "ne" true) 
+-}}
+{{- $paginator := .Paginate $posts -}}
 
 <div class="cards" id="results">
     {{ range $paginator.Pages }}
@@ -29,12 +27,20 @@
 <!-- Pagination links -->
 {{ if gt $paginator.TotalPages 1 }}
     <div class="pagination">
-        {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">before</a>{{ else }}<p></p>{{ end }}
+        {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}">before</a>
+        {{ else }}
+            <p></p>
+        {{ end }}
         <div class="pages">
             {{ range $paginator.Pagers }}
                 <a href="{{ .URL }}"{{ if eq . $paginator }} class="active"{{ end }}>{{ .PageNumber }}</a>
             {{ end }}
         </div>
-        {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">more</a>{{ else }}<p></p>{{ end }}
+        {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}">more</a>
+        {{ else }}
+            <p></p>
+        {{ end }}
     </div>
 {{ end }}
