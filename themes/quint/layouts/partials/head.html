@@ -33,5 +33,16 @@
     <!-- Expose GA Measurement ID to client (used by gtag if present) -->
     <script>window.GA_MEASUREMENT_ID = "{{ .Site.Params.ga_measurement_id }}";</script>
 
+    <!-- Load gtag if a Measurement ID is provided -->
+    {{ if .Site.Params.ga_measurement_id }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga_measurement_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Params.ga_measurement_id }}', { 'anonymize_ip': true });
+    </script>
+    {{ end }}
+
     {{ partial "seo.html" . }}
 </head>
